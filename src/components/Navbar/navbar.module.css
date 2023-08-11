@@ -1,0 +1,67 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 5px 55px;
+  z-index: 1000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s ease-in-out;
+  padding: 3.5px 45px;
+  background-color: #4f6cff79;
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+}
+
+.logo {
+  position: relative;
+  font-weight: 600;
+  color: #4f6dff;
+  text-decoration: none;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li {
+  position: relative;
+  list-style: none;
+}
+
+.list li a {
+  position: relative;
+  margin: 0 20px;
+  text-decoration: none;
+  color: #4f6dff;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.6s;
+}
+
+.sticky .logo,
+.sticky ul li a {
+  color: #fff;
+}
