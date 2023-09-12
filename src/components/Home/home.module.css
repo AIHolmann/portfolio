@@ -2,7 +2,6 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: url("../../../public/alejo.jpg") right / auto 150% no-repeat;
 }
 
 .alejoback::before {
@@ -12,18 +11,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #1e1c27; /* Color de fondo */
-  mix-blend-mode: screen; /* O el modo de mezcla deseado */
+  background-image: url(../../../public/blurry_gradient_1.svg);
 }
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 100vh;
   top: 0;
   left: 0;
-
   color: white;
   padding-left: 150px;
 }
@@ -57,7 +54,7 @@
 .h1 > .span {
   position: relative;
   display: inline-block;
-  color: #ff3c41;
+  color: #ed242b;
   height: 1.25em;
   vertical-align: bottom;
   overflow: hidden;
@@ -97,20 +94,14 @@
 */
 /* styles.module.css */
 
+.imgcontainer {
+  width: 100vh;
+  right: 0;
+}
+
 .mainImage {
-  width: 500;
   height: 75%;
   object-fit: cover;
-  opacity: 0.7;
-  transition: 0.3s ease-in-out;
 
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-}
-
-.mainImage:hover {
-  opacity: 1;
-}
-
-.imgcontainer {
-  border: #ff3c41 2px solid;
 }
