@@ -48,6 +48,7 @@
   position: relative;
   font-weight: 600;
   color: #6f41ff;
+  color: #e2f8ff;
   text-decoration: none;
   font-size: 1.7em;
   text-transform: uppercase;
@@ -78,7 +79,7 @@
   position: relative;
   margin: 0 20px;
   text-decoration: none;
-  color: #4f6dff;
+  color: #6f41ff;
   cursor: pointer;
   letter-spacing: 2px;
   font-weight: 500;

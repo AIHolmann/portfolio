@@ -43,33 +43,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  /* const [className, setClassName] = useState("container");
-  const [zIndex, setZIndex] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const newZIndex = window.scrollY > 0 ? 1 : 0;
-      setZIndex(newZIndex);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (zIndex === 0) {
-      setClassName("container");
-    } else {
-      setClassName("sticky");
-    }
-  }, [zIndex]);
-
- //className == "container"
-          ? style.container
-          : style.sticky*/
 
   return (
     <nav
