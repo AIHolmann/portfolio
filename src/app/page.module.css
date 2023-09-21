@@ -1,1 +1,10 @@
-
+.all {
+  min-height: 600vh;
+  background-color: #6f41ff;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(194.87, 100%, 53%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);
+}
