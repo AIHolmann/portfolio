@@ -1,0 +1,98 @@
+/*
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slideContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+.imageContainer {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  height: 300px; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slideContent {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.active {
+  min-width: 100%;
+}
+
+.dotsContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: #333;
+}
+*/
+.carousel_item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 490px;
+  background-color: #fff;
+}
+
+.carousel_img {
+  width: 250px;
+  padding: 0 20px 0 20px;
+}
+
+.carousel_item_text {
+  font-size: 1.15rem;
+  margin: 40px 0 40px 0;
+  padding: 0 20px 0 20px;
+  white-space: normal;
+  color: #617d98;
+}

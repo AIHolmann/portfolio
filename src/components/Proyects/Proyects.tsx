@@ -1,65 +1,95 @@
 "use client";
-import Image from "next/image";
-import style from "./proyects.module.css";
+import React, { useState } from "react";
 import image1 from "../../../public/Imagen1.jpg";
 import image2 from "../../../public/Imagen2.jpg";
-import { useRef } from "react";
+
+import Carousel from "../Carousel/Carousel";
+import style from "./proyects.module.css";
+
+const data = [
+  {
+    name: "Nombre del primer proyecto",
+    description:
+      "Descripcion del primer proyecto: Este es un proyecto de un error bla bla bla",
+    stack: ["HTML", "CSS", "JavaScript"],
+    image: image1,
+    id: 1,
+  },
+  {
+    name: "Nombre del segundo proyecto",
+    description:
+      "Descripcion del segundo proyecto: Y aqui gente esta un lorem para ustedes: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat quasi atque error. Dicta doloremque, vel animi autem culpa exercitationem, voluptates esse aspernatur quibusdam perferendis modi minima ex debitis minus.",
+    stack: ["HTML", "CSS", "TypeScript"],
+    image: image2,
+    id: 2,
+  },
+];
 
 const Proyects = () => {
-  const proyects = [
-    {
-      name: "Nombre del primer proyecto",
-      description: "Descripcion del primer proyecto",
-      stack: ["HTML", "CSS", "JavaScript"],
-      image: image1,
-    },
-    {
-      name: "Nombre del segundo proyecto",
-      description: "Descripcion del segundo proyecto",
-      stack: ["HTML", "CSS", "TypeScript"],
-      image: image2,
-    },
-  ];
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  //const grande = document.querySelector(".grande");
-  const grande = useRef<HTMLDivElement>(null);
-  const punto = document.querySelectorAll(".punto");
-  console.log(punto);
-
-  punto.forEach((cadaPunto, i) => {
-    punto[i].addEventListener("click", () => {
-      let posicion = i;
-      let operacion = posicion * -50;
-      if (grande.current) {
-        grande.current.style.transform = `translateX(${operacion}%)`;
-      }
-    });
-  });
+  const updateIndex = (newIndex: any) => {
+    if (newIndex < 0) {
+      newIndex = 0;
+    } else if (newIndex >= data.length) {
+      newIndex = data.length - 1;
+    }
+    setActiveIndex(newIndex);
+  };
 
   return (
-    <div className={style.carrousel}>
-      <div className={style.grande} ref={grande}>
-        {proyects.map((el) => {
-          return (
-            <Image
-              src={el.image}
-              alt={el.name}
-              className={style.img}
-              key={el.name}
-            />
-          );
-        })}
+    <div className={style.all}>
+      <div className={style.carousel}>
+        <div
+          className={style.inner}
+          style={{ transform: `translate(-${activeIndex * 100}%)` }}
+        >
+          {data.map((item) => {
+            return <Carousel key={item.id} data={item} />;
+          })}
+        </div>
+        <div className={style.carousel_buttons}>
+          <button
+            onClick={() => {
+              updateIndex(activeIndex - 1);
+            }}
+            className={style.button_arrow}
+          >
+            <span>{"\u2329"}</span>
+          </button>
+          <div className={style.indicators}>
+            {data.map((item, index) => {
+              return (
+                <button
+                  onClick={() => {
+                    updateIndex(index);
+                  }}
+                  key={item.id}
+                  className={style.indicator_buttons}
+                >
+                  <span
+                    className={`${
+                      index === activeIndex
+                        ? style.indicator_symbol_active
+                        : style.indicator_symbol
+                    }`}
+                  >
+                    {"\u233e"}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+          <button
+            onClick={() => {
+              updateIndex(activeIndex + 1);
+            }}
+            className={style.button_arrow}
+          >
+            <span>{"\u232a"}</span>
+          </button>
+        </div>
       </div>
-      <ul className={style.puntos}>
-        {proyects.map((element) => {
-          console.log(element);
-          return (
-            <li key={element.name} className={style.punto}>
-              .
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };
