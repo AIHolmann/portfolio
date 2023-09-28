@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import image1 from "../../../public/Imagen1.jpg";
 import image2 from "../../../public/Imagen2.jpg";
+import image3 from "../../../public/imagenchata.jpg";
 
 import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
@@ -21,6 +22,14 @@ const data = [
       "Descripcion del segundo proyecto: Y aqui gente esta un lorem para ustedes: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat quasi atque error. Dicta doloremque, vel animi autem culpa exercitationem, voluptates esse aspernatur quibusdam perferendis modi minima ex debitis minus.",
     stack: ["HTML", "CSS", "TypeScript"],
     image: image2,
+    id: 2,
+  },
+  {
+    name: "Nombre del tercer proyecto",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat quasi atque error. Dicta doloremque, vel animi autem culpa exercitationem, voluptates esse aspernatur quibusdam perferendis modi minima ex debitis minus. bla bla bla bla bla bla bla bla bla bla bla bla bla bla.......*******************",
+    stack: ["HTML", "CSS", "TypeScript"],
+    image: image3,
     id: 2,
   },
 ];
