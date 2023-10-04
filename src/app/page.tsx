@@ -5,6 +5,7 @@ import Proyects from "@/components/Proyects/Proyects";
 import Education from "@/components/Education/Education";
 import Contact from "@/components/Contact/Contact";
 import style from "./page.module.css";
+import Footer from "@/components/Footer/Footer";
 
 const Index = () => {
   return (
@@ -26,6 +27,9 @@ const Index = () => {
       </div>
       <div id="contact">
         <Contact />
+      </div>
+      <div id="footer">
+        <Footer />
       </div>
     </div>
   );
