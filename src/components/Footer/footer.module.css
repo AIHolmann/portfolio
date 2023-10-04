@@ -1,0 +1,24 @@
+.footer {
+  min-height: 10vh;
+  margin-top: 35px;
+  /*background-color: #111927;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(194.87, 100%, 53%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(254.53, 100%, 63%) 0, transparent 55%);*/
+  border-top: 3px ridge #4f6dff;
+  margin-left: 35px;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+.alejo {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}

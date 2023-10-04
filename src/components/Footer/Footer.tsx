@@ -1,8 +1,19 @@
+import style from "./footer.module.css";
+
 const Footer = () => {
+  const ahora = new Date();
+  const añoActual = ahora.getFullYear();
+
   return (
-    <footer>
-      <div>parte1</div>
-      <div>Parte 2</div>
+    <footer className={style.footer}>
+      <section>
+        <span>
+          © {añoActual}. Todos los derechos reservados | Diseño y desarrollo{" "}
+          <a href="mailto:alejoholmann99@gmail.com" className={style.alejo}>
+            Alejo Holmann
+          </a>
+        </span>
+      </section>
     </footer>
   );
 };
