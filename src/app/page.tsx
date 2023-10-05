@@ -28,9 +28,8 @@ const Index = () => {
       <div id="contact">
         <Contact />
       </div>
-      <div id="footer">
-        <Footer />
-      </div>
+
+      <Footer />
     </div>
   );
 };

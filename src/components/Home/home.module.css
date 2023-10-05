@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   color: white;
-  padding-left: 150px;
+  padding-left: 100px;
 }
 
 @keyframes animateWords {
@@ -48,7 +48,7 @@
 }
 
 .h1 {
-  font-size: 3em;
+  font-size: 2.8em;
 }
 
 .h1 > .span {

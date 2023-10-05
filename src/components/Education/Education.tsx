@@ -20,7 +20,7 @@ const Education = () => {
           </details>
           <details className={style.secundarios}>
             <summary>Bachiller en comercio y economía</summary>
-            <p>IPEM 168 Diego de Rojas. 2012 - 2017</p>
+            <p>IPEM 168 Diego de Rojas. 2017.</p>
           </details>
         </details>
         <details className={style.principales}>

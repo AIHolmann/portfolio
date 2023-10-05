@@ -1,72 +1,3 @@
-/*
-.main_container {
-  width: 500px;
-  height: 280px;
-  margin: 0 auto;
-}
-
-/* Slider container 
-.slider_container {
-  position: relative;
-  height: 100%;
-}
-/* dots carrusel 
-.dots_container {
-  display: flex;
-  justify-content: center;
-}
-
-.dot_container_item {
-  margin: 8px 3px;
-  cursor: pointer;
-  font-size: 12px;
-  text-align: center;
-}
-
-/* Arrows 
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.container_images {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  border: 1px solid #eee;
-  overflow: hidden;
-}
-
-.container_images ul li {
-  display: inline;
-}
-
-div.active {
-  background: #ccc;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-*/
 .all {
   display: flex;
   justify-content: center;
@@ -76,9 +7,18 @@ div.active {
   /*background-color: #85a8c56c;*/
 }
 
+.all h2 {
+  color: whitesmoke;
+  font-size: 40px;
+  letter-spacing: 6px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
 .carousel {
   overflow: hidden;
-  width: 700px;
+  width: 1080px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +33,7 @@ div.active {
 
 .carousel_buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .button-arrow {
@@ -101,6 +41,16 @@ div.active {
   border: none;
   cursor: pointer;
   margin-top: 20px;
+  width: 45px;
+  height: 45px;
+}
+
+.span {
+  font-size: 25px;
+}
+
+.span:active {
+  color: whitesmoke;
 }
 
 .indicators {
@@ -124,5 +74,5 @@ div.active {
 }
 
 .indicator_symbol_active {
-  color: #ffffff;
+  color: whitesmoke;
 }

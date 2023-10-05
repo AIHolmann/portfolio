@@ -48,6 +48,7 @@ const Proyects = () => {
 
   return (
     <div className={style.all}>
+      <h2>Proyects</h2>
       <div className={style.carousel}>
         <div
           className={style.inner}
@@ -64,7 +65,7 @@ const Proyects = () => {
             }}
             className={style.button_arrow}
           >
-            <span>{"\u2329"}</span>
+            <span className={style.span}>{"\u2329"}</span>
           </button>
           <div className={style.indicators}>
             {data.map((item, index) => {
@@ -95,7 +96,7 @@ const Proyects = () => {
             }}
             className={style.button_arrow}
           >
-            <span>{"\u232a"}</span>
+            <span className={style.span}>{"\u232a"}</span>
           </button>
         </div>
       </div>
