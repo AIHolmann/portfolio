@@ -48,7 +48,7 @@ const Proyects = () => {
 
   return (
     <div className={style.all}>
-      <h2>Proyects</h2>
+      <h2>Proyectos</h2>
       <div className={style.carousel}>
         <div
           className={style.inner}
