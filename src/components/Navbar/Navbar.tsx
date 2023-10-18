@@ -6,21 +6,6 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(0);
   const [scroll, setScroll] = useState(0);
 
-  /*
- const handleScroll = () => {
-      let ubiAct = window.scrollY;
-
-      if (ubiPrinc >= ubiAct) {
-        setIsSticky(0);
-      } else if (ubiPrinc > ubiAct) {
-        setIsSticky(1);
-      } else {
-        setIsSticky(2);
-      }
-      ubiPrinc = ubiAct;
-    };
-*/
-
   useEffect(() => {
     let ubiPrinc = window.scrollY;
 
@@ -43,6 +28,10 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleClass = () => {
+    document.body.classList.toggle("dark");
+  };
 
   return (
     <nav
@@ -94,6 +83,13 @@ const Navbar = () => {
         </li>
         <li>
           <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <input
+            aria-checked={true}
+            type="checkbox"
+            className={style.switch}
+          ></input>
         </li>
       </ul>
     </nav>
