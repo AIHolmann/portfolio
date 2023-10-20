@@ -3,14 +3,9 @@ import { useRef } from "react";
 import style from "./about.module.css";
 
 const About = () => {
-  const elemento = window.document.getElementById("tarjeta");
-  console.log("Elementoooo:", elemento);
   const el = useRef<HTMLDivElement>(null);
-  console.log(el);
 
   const handleMouseMove = (event: any) => {
-    console.log("evento: , ", event);
-    console.log("*******************************", el.current?.clientHeight);
     if (el.current) {
       const { clientHeight, clientWidth } = el.current;
       const { clientX, clientY } = event;

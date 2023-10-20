@@ -9,7 +9,7 @@ import Footer from "@/components/Footer/Footer";
 
 const Index = () => {
   return (
-    <div className={style.all}>
+    <div className={style.all} id="allApp">
       <div id="home">
         <Home />
       </div>

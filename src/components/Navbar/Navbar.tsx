@@ -29,10 +29,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleClass = () => {
-    document.body.classList.toggle("dark");
-  };
-
   return (
     <nav
       className={
