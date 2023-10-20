@@ -8,3 +8,14 @@
     ),
     radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);
 }
+
+.allblack {
+  min-height: 500vh;
+  background-color: #282828;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(218.24, 100%, 53%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(254.53, 100%, 62%) 0, transparent 55%);
+}

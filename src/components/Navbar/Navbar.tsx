@@ -1,10 +1,15 @@
 "use client";
 import style from "./navbar.module.css";
 import { useState, useEffect } from "react";
+import { light, dark } from "../../store/slices/theme";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "@/store";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(0);
   const [scroll, setScroll] = useState(0);
+  const dispatch = useDispatch();
+  const mode = useSelector((state: RootState) => state.mode.value);
 
   useEffect(() => {
     let ubiPrinc = window.scrollY;
@@ -85,6 +90,11 @@ const Navbar = () => {
             aria-checked={true}
             type="checkbox"
             className={style.switch}
+            onClick={
+              mode === "light"
+                ? () => dispatch(dark())
+                : () => dispatch(light())
+            }
           ></input>
         </li>
       </ul>

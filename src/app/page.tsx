@@ -1,3 +1,4 @@
+"use client";
 import Home from "@/components/Home/Home";
 import About from "@/components/About/About";
 import Stack from "@/components/Stack/Stack";
@@ -6,10 +7,14 @@ import Education from "@/components/Education/Education";
 import Contact from "@/components/Contact/Contact";
 import style from "./page.module.css";
 import Footer from "@/components/Footer/Footer";
+import type { RootState } from "@/store";
+import { useSelector } from "react-redux";
 
 const Index = () => {
+  const mode = useSelector((state: RootState) => state.mode.value);
+
   return (
-    <div className={style.all} id="allApp">
+    <div className={mode === "light" ? style.all : style.allblack} id="allApp">
       <div id="home">
         <Home />
       </div>
