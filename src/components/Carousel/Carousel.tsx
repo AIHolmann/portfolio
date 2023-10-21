@@ -19,8 +19,10 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
     <div className={style.carousel_item}>
       <div></div>
       <Image className={style.carousel_img} alt={data.name} src={data.image} />
-      <div className={style.carousel_item_text}>{data.description}</div>
-      <div className={style.carousel_item_text}>{data.stack}</div>
+      <div className={style.texto}>
+        <div className={style.carousel_item_text}>{data.description}</div>
+        <div className={style.carousel_item_text}>{data.stack}</div>
+      </div>
     </div>
   );
 };
