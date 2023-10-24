@@ -250,15 +250,15 @@ const About = () => {
             </svg>
             <h2>Alejo Holmann</h2>
 
-            <h3>Desarrollador Web Full Stack.</h3>
+            <h3>Full Stack Web Developer.</h3>
           </div>
           <article>
             <p>
-              Residiendo en Córdoba, a mis 23 años me dedico al desarrollo web
-              de aplicaciones dinámicas. Me enfoco en darles una apariencia semi
-              minimalista, buena experiencia de usuario y un diseño acorde a las
-              necesidades. Busco el constante crecimiento y desarrollo de mis
-              habilidades tecnicas y de mi persona.
+              Residing in Córdoba, at 23 years old, I dedicate myself to the
+              development of dynamic web applications. I focus on giving them a
+              semi-minimalistic appearance, a good user experience, and a design
+              tailored to the requirements. I seek the constant growth and
+              development of my technical skills and myself as an individual.
             </p>
           </article>
         </section>

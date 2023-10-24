@@ -1,35 +1,42 @@
 "use client";
 import React, { useState } from "react";
-import image1 from "../../../public/Imagen1.jpg";
-import image2 from "../../../public/Imagen2.jpg";
-import image3 from "../../../public/imagenchata.jpg";
+import portfolio from "../../../public/portfolio.jpg";
+import lapilcha from "../../../public/lapilcha.jpg";
+import rickandmorty from "../../../public/rickandmorty.jpg";
 
 import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
 
 const data = [
   {
-    name: "Nombre del primer proyecto",
+    name: "Portfolio",
     description:
-      "Descripcion del primer proyecto: Este es un proyecto de un error bla bla bla",
-    stack: ["HTML", "CSS", "JavaScript"],
-    image: image1,
+      "Personal Portfolio, designed and developed by me. It features a night mode and simple functionalities. Statistics dashboard in development",
+    stack: ["HTML", "CSS", "TypeScript", "Redux Toolkit"],
+    image: portfolio,
     id: 1,
   },
   {
-    name: "Nombre del segundo proyecto",
+    name: "LaPilcha",
     description:
-      "Descripcion del segundo proyecto: Y aqui gente esta un lorem para ustedes: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat quasi atque error. Dicta doloremque, vel animi autem culpa exercitationem, voluptates esse aspernatur quibusdam perferendis modi minima ex debitis minus.",
-    stack: ["HTML", "CSS", "TypeScript"],
-    image: image2,
+      "Final project by students from the Henry academy, collaborating and developing as a team. LaPilcha is an e-commerce project that offers an online clothing store. It features a complete CRUD and enables users to browse and purchase various fashionable items, select favorites, save them in the shopping cart, create users with Auth0, an integrated payment gateway with 'MercadoPago' for secure transactions, correspondence emails from an SMTP server, and an extensive admin dashboard among other functions.",
+    stack: [
+      "HTML",
+      "Tailwind CSS",
+      "TypeScript",
+      "Redux Toolkit",
+      "Node.js",
+      "MongoDB",
+    ],
+    image: lapilcha,
     id: 2,
   },
   {
-    name: "Nombre del tercer proyecto",
+    name: "Rick and Morty App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat quasi atque error. Dicta doloremque, vel animi autem culpa exercitationem, voluptates esse aspernatur quibusdam perferendis modi minima ex debitis minus. bla bla bla bla bla bla bla bla bla bla bla bla bla bla.......*******************",
-    stack: ["HTML", "CSS", "TypeScript"],
-    image: image3,
+      "An application in the style of a 'pokédex' with the theme of the animated series 'Rick and Morty'. It features a complete CRUD, user authentication, a favorite selection system, and combined filters.",
+    stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
+    image: rickandmorty,
     id: 2,
   },
 ];
@@ -48,7 +55,7 @@ const Proyects = () => {
 
   return (
     <div className={style.all}>
-      <h2>Proyectos</h2>
+      <h2>Proyects</h2>
       <div className={style.carousel}>
         <div
           className={style.inner}

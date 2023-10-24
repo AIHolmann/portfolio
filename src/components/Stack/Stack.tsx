@@ -104,7 +104,7 @@ const Stack = () => {
 
   return (
     <div className={style.container}>
-      <h2>Stack de tecnologías</h2>
+      <h2>Technology stack</h2>
       <ul>
         {infoStack.map((stack) => {
           return (

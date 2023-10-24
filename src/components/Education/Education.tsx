@@ -3,48 +3,48 @@ import style from "./education.module.css";
 const Education = () => {
   return (
     <div className={style.container}>
-      <h2>Educación</h2>
+      <h2>Education</h2>
       <div className={style.subcontainer}>
         <details className={style.principales}>
-          <summary>Educación Profesional</summary>
+          <summary>Professional Education</summary>
           <details className={style.secundarios}>
             <summary>Full Stack Web Developer</summary>
-            <p>Henry Bootcamp. 700 horas de cursado teórico-práctico. 2023.</p>
+            <p>
+              Henry Bootcamp. 700 hours of theoretical-practical courses. 2023.
+            </p>
           </details>
           <details className={style.secundarios}>
-            <summary>Ingeniería Industrial - EN CURSO -</summary>
+            <summary>Industrial Engineering - IN PROGRESS -</summary>
             <p>
-              Tercer año, Universidad Tecnológica Nacional - Facultad Regional
+              Third year, National Technological University - Regional Faculty
               Córdoba. 2021.
             </p>
           </details>
           <details className={style.secundarios}>
-            <summary>Bachiller en comercio y economía</summary>
+            <summary>Bachelor in commerce and economics</summary>
             <p>IPEM 168 Diego de Rojas. 2017.</p>
           </details>
         </details>
         <details className={style.principales}>
-          <summary>Educación Complementaria</summary>
+          <summary>Supplementary Education</summary>
           <details className={style.secundarios}>
-            <summary>Escuela de Idiomas</summary>
+            <summary>Language School</summary>
             <p>Set Idiomas. 2018.</p>
           </details>
           <details className={style.secundarios}>
-            <summary>
-              Fundamentos profesionales del desarrollo de software
-            </summary>
+            <summary>Professional Fundamentals of Software Development</summary>
             <p>Microsoft y LinkedIn. 2023.</p>
           </details>
         </details>
         <details className={style.principales}>
-          <summary>Idiomas</summary>
+          <summary>Languages</summary>
           <details className={style.secundarios}>
-            <summary>Inglés C1</summary>
-            <p>Advanced - Nivel conversacional: Intermedio</p>
+            <summary>English C1</summary>
+            <p>Advanced - Conversational level: Intermediate</p>
           </details>
           <details className={style.secundarios}>
-            <summary>Italiano A1</summary>
-            <p>Basic - Nivel conversacional: Bajo</p>
+            <summary>Italian A1</summary>
+            <p>Basic - Conversational level: Low</p>
           </details>
         </details>
         {/* <details className={style.principales}>

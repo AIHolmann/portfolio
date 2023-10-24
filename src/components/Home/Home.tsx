@@ -14,18 +14,18 @@ const Home = () => {
           <div className={style.conth1}>
             <h1 className={style.h1}>
               {" "}
-              ¡Hola!,
+              ¡Hi!,
               <br />
-              soy Alejo Holmann.
+              {"I'm Alejo Holmann."}
               <br />
-              Desarrollador Web Full-Stack
+              Full-Stack Web Developer
               <br />
               <span className={style.span}>
-                <span className={style.span}> Eficiente</span>
-                <span className={style.span}> Creativo</span>
-                <span className={style.span}> Proactivo</span>
+                <span className={style.span}> Efficient</span>
+                <span className={style.span}> Creative</span>
+                <span className={style.span}> Proactive</span>
                 <span className={style.span}> Adaptable</span>
-                <span className={style.span}> Responsable</span>
+                <span className={style.span}> Responsible</span>
               </span>
             </h1>
           </div>

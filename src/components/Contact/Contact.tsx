@@ -4,10 +4,10 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <div className={style.container}>
-      <h2>Contáctame</h2>
+      <h2>Contact me</h2>
       <h4>
-        Si tienes interés en <b>contratarme</b>, házmelo saber, <b>envíame</b>{" "}
-        un mail o <b>conecta</b> y escríbeme vía LinkedIn.
+        If you are interested in <b>hiring me</b>, let me know, <b>send me</b>{" "}
+        an email or <b>connect</b> and write to me via LinkedIn.
       </h4>
 
       <div className={style.card}>
