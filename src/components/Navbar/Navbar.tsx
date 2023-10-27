@@ -33,7 +33,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  /*123*/
+
   return (
     <nav
       className={
@@ -44,6 +44,10 @@ const Navbar = () => {
           : style.hidden
       }
     >
+      <input type="checkbox" id="check" className={style.check} />
+      <label htmlFor="check" className={style.checkbtn}>
+        <i>{"\u2630"}</i>
+      </label>
       <a href="#home">
         <div className={style.logo}>
           <svg

@@ -1,9 +1,22 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import style from "./about.module.css";
 
 const About = () => {
   const el = useRef<HTMLDivElement>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleMouseMove = (event: any) => {
     if (el.current) {
@@ -24,8 +37,8 @@ const About = () => {
       el.current.style.transform = `perspective(500px) scale(1) rotateX(0) rotateY(0)`;
     }
   };
-
-  return (
+  console.log(windowWidth);
+  return windowWidth > 1024 ? (
     <div className={style.main}>
       <div
         className={style.back}
@@ -263,6 +276,16 @@ const About = () => {
           </article>
         </section>
       </div>
+    </div>
+  ) : (
+    <div>
+      <p>
+        Residing in Córdoba, at 23 years old, I dedicate myself to the
+        development of dynamic web applications. I focus on giving them a
+        semi-minimalistic appearance, a good user experience, and a design
+        tailored to the requirements. I seek the constant growth and development
+        of my technical skills and myself as an individual.
+      </p>
     </div>
   );
 };

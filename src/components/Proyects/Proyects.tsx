@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import portfolio from "../../../public/portfolio.jpg";
 import lapilcha from "../../../public/lapilcha.jpg";
 import rickandmorty from "../../../public/rickandmorty.jpg";
-
 import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
+import Card from "../Card/Card";
 
 const data = [
   {
@@ -43,6 +43,19 @@ const data = [
 
 const Proyects = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const updateIndex = (newIndex: any) => {
     if (newIndex < 0) {
@@ -56,57 +69,65 @@ const Proyects = () => {
   return (
     <div className={style.all}>
       <h2>Proyects</h2>
-      <div className={style.carousel}>
-        <div
-          className={style.inner}
-          style={{ transform: `translate(-${activeIndex * 100}%)` }}
-        >
-          {data.map((item) => {
-            return <Carousel key={item.id} data={item} />;
-          })}
-        </div>
-        <div className={style.carousel_buttons}>
-          <button
-            onClick={() => {
-              updateIndex(activeIndex - 1);
-            }}
-            className={style.button_arrow}
+      {windowWidth > 1024 ? (
+        <div className={style.carousel}>
+          <div
+            className={style.inner}
+            style={{ transform: `translate(-${activeIndex * 100}%)` }}
           >
-            <span className={style.span}>{"\u2329"}</span>
-          </button>
-          <div className={style.indicators}>
-            {data.map((item, index) => {
-              return (
-                <button
-                  onClick={() => {
-                    updateIndex(index);
-                  }}
-                  key={item.id}
-                  className={style.indicator_buttons}
-                >
-                  <span
-                    className={`${
-                      index === activeIndex
-                        ? style.indicator_symbol_active
-                        : style.indicator_symbol
-                    }`}
-                  >
-                    {"\u233e"}
-                  </span>
-                </button>
-              );
+            {data.map((item) => {
+              return <Carousel key={item.id} data={item} />;
             })}
           </div>
-          <button
-            onClick={() => {
-              updateIndex(activeIndex + 1);
-            }}
-            className={style.button_arrow}
-          >
-            <span className={style.span}>{"\u232a"}</span>
-          </button>
+          <div className={style.carousel_buttons}>
+            <button
+              onClick={() => {
+                updateIndex(activeIndex - 1);
+              }}
+              className={style.button_arrow}
+            >
+              <span className={style.span}>{"\u2329"}</span>
+            </button>
+            <div className={style.indicators}>
+              {data.map((item, index) => {
+                return (
+                  <button
+                    onClick={() => {
+                      updateIndex(index);
+                    }}
+                    key={item.id}
+                    className={style.indicator_buttons}
+                  >
+                    <span
+                      className={`${
+                        index === activeIndex
+                          ? style.indicator_symbol_active
+                          : style.indicator_symbol
+                      }`}
+                    >
+                      {"\u233e"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              onClick={() => {
+                updateIndex(activeIndex + 1);
+              }}
+              className={style.button_arrow}
+            >
+              <span className={style.span}>{"\u232a"}</span>
+            </button>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div>
+          {data.map((item) => {
+            return <Card key={item.id} data={item} />;
+          })}
+        </div>
+      )}
     </div>
   );
 };
