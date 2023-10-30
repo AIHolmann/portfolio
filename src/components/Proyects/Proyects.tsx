@@ -6,6 +6,7 @@ import rickandmorty from "../../../public/rickandmorty.jpg";
 import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
 import Card from "../Card/Card";
+import videogames from "../../../public/videogames.png";
 
 const data = [
   {
@@ -37,7 +38,15 @@ const data = [
       "An application in the style of a 'pokédex' with the theme of the animated series 'Rick and Morty'. It features a complete CRUD, user authentication, a favorite selection system, and combined filters.",
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
     image: rickandmorty,
-    id: 2,
+    id: 3,
+  },
+  {
+    name: "VideoGames App",
+    description:
+      "Final individual project from the Henry academy. It features a complete CRUD and displays the stock of video games from an API. With a relational database to store user-created video games, it allows interaction with combined filters.",
+    stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
+    image: videogames,
+    id: 4,
   },
 ];
 
