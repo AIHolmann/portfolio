@@ -19,3 +19,17 @@
     ),
     radial-gradient(at 82% 65%, hsl(254.53, 100%, 62%) 0, transparent 55%);
 }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .all,
+  .allblack {
+    min-height: 300vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .all,
+  .allblack {
+    min-height: 300vh;
+  }
+}

@@ -78,3 +78,22 @@
   color: whitesmoke;
   font-size: large;
 }
+/*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: relative;*/
+.cardCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .all {
+    height: auto;
+  }
+}

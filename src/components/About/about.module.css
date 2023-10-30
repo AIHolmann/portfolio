@@ -1,33 +1,12 @@
 .main {
-  /* background-image: url(../../../public/blurry_gradient_2_2.svg);*/
-  /* background-color: #6f41ff;
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(194.87, 100%, 53%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);*/
-
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   color: whitesmoke;
   border-top: #6f41ff solid 4px;
-  
 }
-/*
-.back {
-  background-color: #6f41ff;
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(194.87, 100%, 53%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);
-  padding: 50px;
-}
-*/
+
 .back {
   transition: box-shadow 0.1s;
   transform: 0.2s ease-in-out;
@@ -72,4 +51,32 @@
 .card div svg:hover {
   transition: 0.35s ease-in-out;
   scale: 1.06;
+}
+
+.cardplane {
+  width: 80%;
+  height: 50%;
+  border-top: 2px solid #ffffff75;
+  border-left: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  background: #ffffff25;
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  padding: 25px;
+}
+
+.cardplane p {
+  font-size: clamp(16px, 24px, 32px);
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .main {
+    min-height: 50vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
 }

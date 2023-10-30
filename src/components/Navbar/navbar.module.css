@@ -164,9 +164,14 @@
   display: none;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1023px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .list li a {
     font-size: 16px;
+    color: #fff;
+  }
+
+  .container {
+    background-color: #4f6cff79;
   }
 }
 

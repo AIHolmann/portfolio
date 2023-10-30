@@ -70,3 +70,11 @@
   transform: translateY(-1.2vw);
   box-shadow: 0 1.5vw 1.5vw rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .container {
+    min-height: 50vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+  }
+}

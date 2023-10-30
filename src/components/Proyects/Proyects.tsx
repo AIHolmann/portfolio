@@ -131,7 +131,7 @@ const Proyects = () => {
           </div>
         </div>
       ) : (
-        <div>
+        <div className={style.cardCont}>
           {data.map((item) => {
             return <Card key={item.id} data={item} />;
           })}
