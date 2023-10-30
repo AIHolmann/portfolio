@@ -171,6 +171,18 @@
 }
 
 @media screen and (max-width: 767px) {
+  .container,
+  .hidden,
+  .sticky {
+    padding: 3.5px 15px;
+    width: calc(100%);
+    color: whitesmoke;
+  }
+
+  .logo span {
+    margin-left: 2px;
+  }
+
   .checkbtn {
     display: block;
   }
@@ -179,6 +191,33 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #2828288e;
+    background: #282828d7;
+    top: 45px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list li {
+    display: block;
+    margin: 30px 0;
+    line-height: 20px;
+  }
+
+  .list li a {
+    font-size: 20px;
+    color: whitesmoke;
+  }
+
+  .list li a:hover,
+  .list li a.active {
+    background: none;
+    color: #29a2ff;
+  }
+
+  .check:checked ~ .list {
+    left: 0;
   }
 }

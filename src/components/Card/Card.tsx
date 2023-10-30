@@ -17,6 +17,7 @@ const Card: React.FC<CarouselProps> = ({ data }) => {
   return (
     <div>
       <h5>{data.name}</h5>
+      <p>{data.description}</p>
     </div>
   );
 };
