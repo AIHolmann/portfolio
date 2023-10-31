@@ -1,6 +1,5 @@
 import Navbar from "../Navbar/Navbar";
 import style from "./home.module.css";
-import alejopng from "../../../public/zyro-image.png";
 import ale from "../../../public/alejo.jpg";
 import Image from "next/image";
 

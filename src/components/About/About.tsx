@@ -4,7 +4,9 @@ import style from "./about.module.css";
 
 const About = () => {
   const el = useRef<HTMLDivElement>(null);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,7 +39,7 @@ const About = () => {
       el.current.style.transform = `perspective(500px) scale(1) rotateX(0) rotateY(0)`;
     }
   };
-  console.log(windowWidth);
+
   return windowWidth > 1024 ? (
     <div className={style.main}>
       <div

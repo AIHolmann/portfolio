@@ -52,7 +52,9 @@ const data = [
 
 const Proyects = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
   useEffect(() => {
     const handleResize = () => {
