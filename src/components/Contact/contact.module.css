@@ -27,7 +27,7 @@
 }
 
 .card {
-  width: 50%;
+  width: 90%;
   height: 80%;
   border-top: 2px solid #ffffff75;
   border-left: 2px solid #ffffff75;
@@ -57,4 +57,11 @@
 
 .link h5:hover {
   scale: 1.1;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .container h4 {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }

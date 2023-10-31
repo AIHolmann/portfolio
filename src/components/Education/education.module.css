@@ -55,3 +55,14 @@
   letter-spacing: 3px;
   font-weight: 100;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .container {
+    min-height: auto;
+    margin-top: 35px;
+  }
+
+  .subcontainer {
+    width: 85%;
+  }
+}
