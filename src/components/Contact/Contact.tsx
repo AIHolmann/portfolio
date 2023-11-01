@@ -56,7 +56,7 @@ const Contact = () => {
                 ></path>
               </g>
             </svg>
-            <h5>alejoholmann99@gmail.com</h5>
+            <h5 className={style.email}>alejoholmann99@gmail.com</h5>
           </Link>
         </div>
         <div>
