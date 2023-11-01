@@ -97,3 +97,9 @@
     height: auto;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .all {
+    height: auto;
+  }
+}
