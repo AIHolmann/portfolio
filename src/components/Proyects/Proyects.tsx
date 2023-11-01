@@ -14,6 +14,7 @@ const data = [
     description:
       "Personal Portfolio, designed and developed by me. It features a night mode and simple functionalities. Statistics dashboard in development",
     stack: ["HTML", "CSS", "TypeScript", "Redux Toolkit"],
+    link: "https://github.com/AIHolmann/portfolio",
     image: portfolio,
     id: 1,
   },
@@ -29,6 +30,7 @@ const data = [
       "Node.js",
       "MongoDB",
     ],
+    link: "https://pf-la-pilcha.vercel.app/",
     image: lapilcha,
     id: 2,
   },
@@ -37,6 +39,7 @@ const data = [
     description:
       "An application in the style of a 'pokédex' with the theme of the animated series 'Rick and Morty'. It features a complete CRUD, user authentication, a favorite selection system, and combined filters.",
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
+    link: "https://github.com/AIHolmann/Rick_and_Morty_new",
     image: rickandmorty,
     id: 3,
   },
@@ -45,6 +48,7 @@ const data = [
     description:
       "Final individual project from the Henry academy. It features a complete CRUD and displays the stock of video games from an API. With a relational database to store user-created video games, it allows interaction with combined filters.",
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
+    link: "https://github.com/AIHolmann/PI_VideoGames",
     image: videogames,
     id: 4,
   },
