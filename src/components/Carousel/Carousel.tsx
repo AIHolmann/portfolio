@@ -1,7 +1,9 @@
+"use client";
 import style from "./Carousel.module.css";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface ProjectData {
   name: string;
@@ -17,30 +19,42 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ data }) => {
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
   return (
-    <div className={style.carousel_item}>
-      <div></div>
-      <Link href={data.link} target="_blank">
-        <Image
-          className={style.carousel_img}
-          alt={data.name}
-          src={data.image}
-        />
-        <div className={style.texto}>
-          <h3 className={style.carousel_item_text}>{data.name}</h3>
-          <div className={style.carousel_item_text}>{data.description}</div>
-          <ul>
-            {data.stack.map((el, i) => {
-              return (
-                <li key={i} className={style.carousel_item_text}>
-                  {el}
-                </li>
-              );
-            })}
-          </ul>
+    domLoaded && (
+      <div className={style.carousel_item}>
+        <div></div>
+        <div>
+          <Link href={data.link} target="_blank">
+            <Image
+              className={style.carousel_img}
+              alt={data.name}
+              src={data.image}
+            />
+            <div className={style.texto}>
+              <h3 className={style.carousel_item_text}>{data.name}</h3>
+              <div className={style.carousel_item_text}>
+                <p>{data.description}</p>
+              </div>
+              <ul>
+                {data.stack.map((el, i) => {
+                  return (
+                    <li key={i} className={style.carousel_item_text}>
+                      {el}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </Link>
         </div>
-      </Link>
-    </div>
+      </div>
+    )
   );
 };
 

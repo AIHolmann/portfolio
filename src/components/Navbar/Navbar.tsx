@@ -61,9 +61,9 @@ const Navbar = () => {
               transform="translate(0 -552.36)"
               fill="none"
               stroke="#555"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="38.966"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="38.966"
             >
               <path d="m125.28 700.91-101.56 101.56 101.56 101.56" />
               <path d="m376.97 700.91 101.56 101.56-101.56 101.56" />

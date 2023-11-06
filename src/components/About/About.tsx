@@ -1,4 +1,3 @@
-"use client";
 import { useRef, useEffect, useState } from "react";
 import style from "./about.module.css";
 
@@ -10,14 +9,27 @@ const About = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      if (typeof window !== "undefined") {
+        const inner = window.innerWidth;
+        setWindowWidth(inner);
+      }
     };
 
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
     };
+  }, []);
+
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
   }, []);
 
   const handleMouseMove = (event: any) => {
@@ -40,7 +52,7 @@ const About = () => {
     }
   };
 
-  return windowWidth > 1024 ? (
+  return domLoaded && windowWidth > 1024 ? (
     <div className={style.main}>
       <div
         className={style.back}
@@ -49,13 +61,13 @@ const About = () => {
         onMouseOut={handleMouseOut}
         ref={el}
       >
-        <section className={style.card}>
+        <div className={style.card}>
           <div>
             <svg
               width="280px"
               height="280px"
               viewBox="0 0 50 50"
-              enable-background="new 0 0 50 50"
+              enableBackground="new 0 0 50 50"
               id="Layer_1"
               version="1.1"
               xmlSpace="preserve"
@@ -276,7 +288,7 @@ const About = () => {
               development of my technical skills and myself as an individual.
             </p>
           </article>
-        </section>
+        </div>
       </div>
     </div>
   ) : (

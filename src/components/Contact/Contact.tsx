@@ -26,11 +26,11 @@ const Contact = () => {
               width="35"
               height="35"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <path
@@ -76,13 +76,13 @@ const Contact = () => {
               xmlSpace="preserve"
               stroke="#0077B5"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 stroke="#ffffff"
-                stroke-width="4.8"
+                strokeWidth="4.8"
               >
                 {" "}
                 <g id="social-linkedin">
