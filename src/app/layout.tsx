@@ -10,17 +10,6 @@ const montserrat = Montserrat({
   weight: ["200", "400"],
 });
 
-export const metadata: Metadata = {
-  title: "AH Developer",
-  description: "Alejo Holmann is a full-stack web developer.",
-  keywords: "JavaScript, React, TypeScript",
-  icons: {
-    icon: ["/favicon.ico?v=4"],
-    apple: ["/apple-touch-icon?v=4"],
-    shortcut: ["/apple-touch-icon"],
-  },
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -29,6 +18,19 @@ export default function RootLayout({
   return (
     <Provider store={store}>
       <html lang="en">
+        <head>
+          <title>Alejo Holmann</title>
+          <meta
+            name="description"
+            content="Alejo Holmann is a full-stack web developer."
+          />
+          <meta name="author" content="alejoholmann99@gmail.com" />
+          <meta charSet="UTF-8" />
+          <meta
+            name="keywords"
+            content="nextjs, react, typescript, redux toolkit"
+          />
+        </head>
         <body className={montserrat.className}>{children}</body>
       </html>
     </Provider>

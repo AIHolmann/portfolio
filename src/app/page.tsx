@@ -26,7 +26,7 @@ const Index = () => {
         id="allApp"
       >
         <div id="home">
-          <Home />
+          <Home />H
         </div>
         <div id="stack">
           <Stack />

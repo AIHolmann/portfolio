@@ -1,5 +1,5 @@
 "use client";
-import style from "./Carousel.module.css";
+import style from "./carousel.module.css";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
