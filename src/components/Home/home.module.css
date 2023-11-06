@@ -3,17 +3,7 @@
   height: 100vh;
   overflow: hidden;
 }
-/*
-.alejoback::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(../../../public/blurry_gradient_1.svg);
-}
-*/
+
 .container {
   display: flex;
   align-items: center;

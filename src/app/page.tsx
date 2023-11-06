@@ -9,33 +9,44 @@ import style from "./page.module.css";
 import Footer from "@/components/Footer/Footer";
 import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const mode = useSelector((state: RootState) => state.mode.value);
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
 
   return (
-    <div className={mode === "light" ? style.all : style.allblack} id="allApp">
-      <div id="home">
-        <Home />
-      </div>
-      <div id="stack">
-        <Stack />
-      </div>
-      <div id="aboutme">
-        <About />
-      </div>
-      <div id="proyects">
-        <Proyects />
-      </div>
-      <div id="education">
-        <Education />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
+    domLoaded && (
+      <div
+        className={mode === "light" ? style.all : style.allblack}
+        id="allApp"
+      >
+        <div id="home">
+          <Home />
+        </div>
+        <div id="stack">
+          <Stack />
+        </div>
+        <div id="aboutme">
+          <About />
+        </div>
+        <div id="proyects">
+          <Proyects />
+        </div>
+        <div id="education">
+          <Education />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    )
   );
 };
 
