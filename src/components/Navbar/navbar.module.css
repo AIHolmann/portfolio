@@ -125,7 +125,8 @@
 
 .switch::before {
   position: absolute;
-  content: "";
+  content: "☀️";
+
   left: calc(1.5rem - 1.6rem);
   top: calc(1.5rem - 1.6rem);
   display: block;
@@ -150,6 +151,7 @@
 .switch:checked:before {
   transform: translateX(100%);
   border-color: rgba(32, 151, 243, 1);
+  content: "🌙";
 }
 
 .checkbtn {

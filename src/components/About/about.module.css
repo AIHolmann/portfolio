@@ -79,4 +79,7 @@
 }
 
 @media screen and (max-width: 767px) {
+  .main {
+    padding-top: 15px;
+  }
 }

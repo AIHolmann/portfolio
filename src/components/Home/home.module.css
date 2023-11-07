@@ -67,15 +67,12 @@
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
-@media screen and (min-width: 1024px) {
-}
-
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 }
 
 @media screen and (max-width: 767px) {
   .alejoback {
-    height: 60vh;
+    height: 70vh;
   }
 
   .container {
@@ -83,7 +80,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 70vh;
     top: 0;
     left: 0;
     color: white;
