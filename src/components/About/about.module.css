@@ -36,9 +36,10 @@
 
 .card article {
   width: 450px;
-  letter-spacing: 4px;
-  font-size: 20px;
+  font-size: 23px;
+
   text-align: justify;
+  word-spacing: 0.1em;
 }
 .card div {
   letter-spacing: 2px;
