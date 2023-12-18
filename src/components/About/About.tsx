@@ -281,7 +281,7 @@ const About = () => {
           </div>
           <article>
             <p>
-              Residing in Córdoba, at 23 years old, I dedicate myself to the
+              Residing in Córdoba, at 24 years old, I dedicate myself to the
               development of dynamic web applications. I focus on giving them a
               semi-minimalistic appearance, a good user experience, and a design
               tailored to the requirements. I seek the constant growth and
@@ -295,7 +295,7 @@ const About = () => {
     <div className={style.main}>
       <div className={style.cardplane}>
         <p>
-          Residing in Córdoba, at 23 years old, I dedicate myself to the
+          Residing in Córdoba, at 24 years old, I dedicate myself to the
           development of dynamic web applications. I focus on giving them a
           semi-minimalistic appearance, a good user experience, and a design
           tailored to the requirements. I seek the constant growth and

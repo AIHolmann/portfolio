@@ -1,14 +1,24 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import portfolio from "../../../public/portfolio.jpg";
-import lapilcha from "../../../public/lapilcha.jpg";
-import rickandmorty from "../../../public/rickandmorty.jpg";
+import portfolio from "../../../public/alejo_holmann.gif";
+import lapilcha from "../../../public/la_pilcha.gif";
+import rickandmorty from "../../../public/rick_morty.gif";
 import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
 import Card from "../Card/Card";
-import videogames from "../../../public/videogames.png";
+import videogames from "../../../public/video_games.gif";
+import jalil from "../../../public/jalil_barber.gif";
 
 const data = [
+  {
+    name: "Jalil Barber",
+    description:
+      "Professional page, designed and developed by me for a barber shop.",
+    stack: ["HTML", "CSS", "JavaScript", "Next14"],
+    link: "https://jalil-barber.vercel.app/",
+    image: jalil,
+    id: 5,
+  },
   {
     name: "Portfolio",
     description:
@@ -16,7 +26,7 @@ const data = [
     stack: ["HTML", "CSS", "TypeScript", "Redux Toolkit"],
     link: "https://github.com/AIHolmann/portfolio",
     image: portfolio,
-    id: 1,
+    id: 4,
   },
   {
     name: "LaPilcha",
@@ -32,7 +42,7 @@ const data = [
     ],
     link: "https://pf-la-pilcha.vercel.app/",
     image: lapilcha,
-    id: 2,
+    id: 3,
   },
   {
     name: "Rick and Morty App",
@@ -41,7 +51,7 @@ const data = [
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
     link: "https://github.com/AIHolmann/Rick_and_Morty_new",
     image: rickandmorty,
-    id: 3,
+    id: 2,
   },
   {
     name: "VideoGames App",
@@ -50,7 +60,7 @@ const data = [
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
     link: "https://github.com/AIHolmann/PI_VideoGames",
     image: videogames,
-    id: 4,
+    id: 1,
   },
 ];
 
