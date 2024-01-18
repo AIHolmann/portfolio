@@ -1,0 +1,51 @@
+.btn a {
+  text-decoration: none;
+}
+
+.btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform: translateY(120px);
+  transition: 0.4s ease-in-out;
+}
+.btnOn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transform: translateY(0);
+  transition: 0.25s ease-in-out;
+}
+
+.scroll_up {
+  /* position: fixed; */
+  right: 3rem;
+  bottom: -50%;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: rgba(29, 29, 31, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: bottom 0.4s, transform 0.4s;
+}
+
+.scroll_up:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* Show scroll-up */
+._show-scroll {
+  bottom: 3rem;
+}
+
+@media (max-width: 1199.98px) {
+  .scroll_up {
+    right: 1rem;
+  }
+}

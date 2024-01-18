@@ -7,6 +7,7 @@ import Education from "@/components/Education/Education";
 import Contact from "@/components/Contact/Contact";
 import style from "./page.module.css";
 import Footer from "@/components/Footer/Footer";
+import Btntop from "@/components/Btntop/Btntop";
 import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
@@ -45,6 +46,7 @@ const Index = () => {
         </div>
 
         <Footer />
+        <Btntop />
       </div>
     )
   );
