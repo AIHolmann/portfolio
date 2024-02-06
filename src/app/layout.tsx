@@ -30,6 +30,10 @@ export default function RootLayout({
             name="keywords"
             content="nextjs, react, typescript, redux toolkit"
           />
+          <meta
+            name="google-site-verification"
+            content="Qt6LLAaZqw8KrWnM4QaqIF9lbf9d9wqK05r7o_rXJk8"
+          />
         </head>
         <body className={montserrat.className}>{children}</body>
       </html>
