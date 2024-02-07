@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(0);
   const [scroll, setScroll] = useState(0);
   let [unic, setUnic] = useState("\u2630");
+  let [close, setClose] = useState(0);
   const dispatch = useDispatch();
   const mode = useSelector((state: RootState) => state.mode.value);
 
@@ -43,7 +44,12 @@ const Navbar = () => {
     }
   };
 
-  const closemenu = () => {};
+  const closemenu = () => {
+    const inputElement: HTMLElement | null = document.getElementById("check");
+    inputElement?.focus();
+    inputElement?.click();
+    unicode();
+  };
 
   return (
     <nav
@@ -86,19 +92,29 @@ const Navbar = () => {
       </a>
       <ul className={style.list}>
         <li>
-          <a href="#aboutme">About me</a>
+          <a href="#aboutme" onClick={closemenu}>
+            About me
+          </a>
         </li>
         <li>
-          <a href="#stack">Stack</a>
+          <a href="#stack" onClick={closemenu}>
+            Stack
+          </a>
         </li>
         <li>
-          <a href="#proyects">Proyects</a>
+          <a href="#proyects" onClick={closemenu}>
+            Proyects
+          </a>
         </li>
         <li>
-          <a href="#education">Education</a>
+          <a href="#education" onClick={closemenu}>
+            Education
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact" onClick={closemenu}>
+            Contact
+          </a>
         </li>
         <li>
           <input

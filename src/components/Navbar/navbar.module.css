@@ -227,8 +227,4 @@
   .check:checked ~ .list {
     left: 0;
   }
-
-  nav a:active .list {
-    left: -100%;
-  }
 }
