@@ -8,6 +8,7 @@ import type { RootState } from "@/store";
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(0);
   const [scroll, setScroll] = useState(0);
+  let [unic, setUnic] = useState("\u2630");
   const dispatch = useDispatch();
   const mode = useSelector((state: RootState) => state.mode.value);
 
@@ -34,6 +35,16 @@ const Navbar = () => {
     };
   }, []);
 
+  const unicode = () => {
+    if (unic === "\u2630") {
+      setUnic("\u2715");
+    } else {
+      setUnic("\u2630");
+    }
+  };
+
+  const closemenu = () => {};
+
   return (
     <nav
       className={
@@ -46,7 +57,7 @@ const Navbar = () => {
     >
       <input type="checkbox" id="check" className={style.check} />
       <label htmlFor="check" className={style.checkbtn}>
-        <i>{"\u2630"}</i>
+        <i onClick={unicode}>{unic}</i>
       </label>
       <a href="#home">
         <div className={style.logo}>
