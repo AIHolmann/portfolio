@@ -6,6 +6,7 @@ const About = () => {
   const [windowWidth, setWindowWidth] = useState<number>(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
+  const [edad, setEdad] = useState("0");
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,6 +52,19 @@ const About = () => {
       el.current.style.transform = `perspective(500px) scale(1) rotateX(0) rotateY(0)`;
     }
   };
+
+  useEffect(() => {
+    const ahora = new Date();
+    let edad = 0;
+    if (ahora.getMonth() >= 10 && ahora.getDay() === 30) {
+      edad = ahora.getFullYear() + 1;
+    } else if (ahora.getMonth() === 11) {
+      edad = ahora.getFullYear() + 1;
+    } else {
+      edad = ahora.getFullYear();
+    }
+    setEdad(edad.toString().slice(-2));
+  }, []);
 
   return domLoaded && windowWidth > 1024 ? (
     <div className={style.main}>
@@ -281,7 +295,7 @@ const About = () => {
           </div>
           <article>
             <p>
-              Residing in Córdoba, at 24 years old, I dedicate myself to the
+              Residing in Córdoba, at {edad} years old, I dedicate myself to the
               development of dynamic web applications. I focus on giving them a
               semi-minimalistic appearance, a good user experience, and a design
               tailored to the requirements. I seek the constant growth and

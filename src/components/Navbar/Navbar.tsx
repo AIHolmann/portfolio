@@ -9,7 +9,6 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(0);
   const [scroll, setScroll] = useState(0);
   let [unic, setUnic] = useState("\u2630");
-  let [close, setClose] = useState(0);
   const dispatch = useDispatch();
   const mode = useSelector((state: RootState) => state.mode.value);
 

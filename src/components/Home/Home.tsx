@@ -4,7 +4,6 @@ import ale from "../../../public/alejo.jpg";
 import Image from "next/image";
 
 const Home = () => {
-  /*<div className="min-h-screen">*/
   return (
     <>
       <div className={style.alejoback}>
