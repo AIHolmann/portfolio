@@ -49,7 +49,56 @@ const Navbar = () => {
     inputElement?.click();
     unicode();
   };
+/*
+  const menuHamburguesa: HTMLElement | null = document.querySelector(".list");
+  const botonCerrar: HTMLElement | null = document.querySelector(".checkbtn");
+  /*
+  botonCerrar?.addEventListener("click", () => {
+    menuHamburguesa?.classList.toggle("activo");
+  });
+  let posInicialX: any = null;
+  let posActualX: any = null;
+  
+  menuHamburguesa?.addEventListener("mousedown", (e) => {
+    posInicialX = e.clientX;
+  });
 
+  let diferenciaX: any;
+  menuHamburguesa?.addEventListener("mousemove", (e) => {
+    if (posInicialX !== null) {
+      posActualX = e.clientX;
+      diferenciaX = posActualX - posInicialX;
+      menuHamburguesa.style.left = `${diferenciaX}px`;
+    }
+  });
+
+  menuHamburguesa?.addEventListener("mouseup", () => {
+    if (posActualX < 0 && Math.abs(diferenciaX) > 50) {
+      menuHamburguesa.classList.remove("activo");
+    }
+    posInicialX = null;
+    posActualX = null;
+  });
+  *//*
+  let diferenciaX: any;
+  menuHamburguesa?.addEventListener("drag", (e) => {
+    diferenciaX = e.clientX - e.offsetX;
+    console.log(diferenciaX);
+    menuHamburguesa.style.left = `${diferenciaX}px`;
+  });
+
+  menuHamburguesa?.addEventListener("dragend", (e) => {
+    if (e.clientX < 0 && Math.abs(diferenciaX) > 50) {
+      // Guardar la configuración del menú como cerrado
+      // ...
+      menuHamburguesa.classList.remove("activo");
+    }
+  });
+  */
+  /*
+  botonCerrar?.addEventListener("click", () => {
+    menuHamburguesa?.classList.toggle("activo");
+  });*/
   return (
     <nav
       className={
