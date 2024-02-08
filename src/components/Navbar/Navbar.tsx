@@ -1,6 +1,6 @@
 "use client";
 import style from "./navbar.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { light, dark } from "../../store/slices/theme";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store";
@@ -49,56 +49,31 @@ const Navbar = () => {
     inputElement?.click();
     unicode();
   };
-/*
-  const menuHamburguesa: HTMLElement | null = document.querySelector(".list");
-  const botonCerrar: HTMLElement | null = document.querySelector(".checkbtn");
-  /*
-  botonCerrar?.addEventListener("click", () => {
-    menuHamburguesa?.classList.toggle("activo");
-  });
-  let posInicialX: any = null;
-  let posActualX: any = null;
-  
-  menuHamburguesa?.addEventListener("mousedown", (e) => {
-    posInicialX = e.clientX;
-  });
 
-  let diferenciaX: any;
-  menuHamburguesa?.addEventListener("mousemove", (e) => {
-    if (posInicialX !== null) {
-      posActualX = e.clientX;
-      diferenciaX = posActualX - posInicialX;
-      menuHamburguesa.style.left = `${diferenciaX}px`;
-    }
-  });
+  const ulRef = useRef<HTMLUListElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [translateX, setTranslateX] = useState(0);
 
-  menuHamburguesa?.addEventListener("mouseup", () => {
-    if (posActualX < 0 && Math.abs(diferenciaX) > 50) {
-      menuHamburguesa.classList.remove("activo");
-    }
-    posInicialX = null;
-    posActualX = null;
-  });
-  *//*
-  let diferenciaX: any;
-  menuHamburguesa?.addEventListener("drag", (e) => {
-    diferenciaX = e.clientX - e.offsetX;
-    console.log(diferenciaX);
-    menuHamburguesa.style.left = `${diferenciaX}px`;
-  });
+  const handleTouchStart = (e: React.TouchEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    setTranslateX(0);
+  };
+  const handleTouchMove = (e: React.TouchEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    const touch = e.touches[0];
+    const rect = ulRef.current?.getBoundingClientRect();
 
-  menuHamburguesa?.addEventListener("dragend", (e) => {
-    if (e.clientX < 0 && Math.abs(diferenciaX) > 50) {
-      // Guardar la configuración del menú como cerrado
-      // ...
-      menuHamburguesa.classList.remove("activo");
+    if (rect && touch.clientX <= rect.right) {
+      setTranslateX(touch.clientX - rect.left);
     }
-  });
-  */
-  /*
-  botonCerrar?.addEventListener("click", () => {
-    menuHamburguesa?.classList.toggle("activo");
-  });*/
+  };
+  const handleTouchEnd = () => {
+    if (translateX >= 50) {
+      setIsDragging(false);
+      setTranslateX(0);
+      closemenu();
+    }
+  };
   return (
     <nav
       className={
@@ -138,7 +113,15 @@ const Navbar = () => {
           <span>AH</span>
         </div>
       </a>
-      <ul className={style.list}>
+      <ul
+        className={style.list}
+        id="draggableList"
+        ref={ulRef}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{ transform: `translateX(-${translateX}px)` }}
+      >
         <li>
           <a href="#aboutme" onClick={closemenu}>
             About me
