@@ -4,6 +4,7 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Loading from "../Loading/Loadin";
 
 interface ProjectData {
   name: string;
@@ -31,11 +32,17 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
         <div></div>
         <div>
           <Link href={data.link} target="_blank">
-            <Image
-              className={style.carousel_img}
-              alt={data.name}
-              src={data.image}
-            />
+            {data.image ? (
+              <Image
+                className={style.carousel_img}
+                alt={data.name}
+                src={data.image}
+              />
+            ) : (
+              <div className={style.carousel_loading}>
+                <Loading />
+              </div>
+            )}
             <div className={style.texto}>
               <h3 className={style.carousel_item_text}>{data.name}</h3>
               <div className={style.carousel_item_text}>

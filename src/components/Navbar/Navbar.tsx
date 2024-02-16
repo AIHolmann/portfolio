@@ -68,7 +68,7 @@ const Navbar = () => {
     }
   };
   const handleTouchEnd = () => {
-    if (translateX >= 50) {
+    if (translateX >= 35) {
       setIsDragging(false);
       setTranslateX(0);
       closemenu();

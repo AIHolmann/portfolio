@@ -58,6 +58,7 @@
 .imgcontainer {
   width: 100vh;
   right: 0;
+  text-align: center;
 }
 
 .mainImage {

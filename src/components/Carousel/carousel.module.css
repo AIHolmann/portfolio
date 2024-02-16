@@ -33,6 +33,15 @@
   object-fit: contain;
 }
 
+.carousel_loading {
+  width: 1080px;
+  height: 540px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .texto:hover {
   opacity: 0;
   transition: 0.3s;

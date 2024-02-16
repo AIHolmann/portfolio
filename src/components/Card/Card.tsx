@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import style from "./card.module.css";
 import Link from "next/link";
+import Loading from "../Loading/Loadin";
 
 interface ProjectData {
   name: string;
@@ -21,7 +22,13 @@ const Card: React.FC<CarouselProps> = ({ data }) => {
     <div className={style.container}>
       <div className={style.thumbnail}>
         <Link href={data.link} target="_blank">
-          <Image alt={data.name} src={data.image} />
+          {data.image ? (
+            <Image alt={data.name} src={data.image} />
+          ) : (
+            <div className={style.loader}>
+              <Loading />
+            </div>
+          )}
         </Link>
       </div>
       <div className={style.content}>

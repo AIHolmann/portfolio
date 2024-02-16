@@ -2,6 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import style from "./home.module.css";
 import ale from "../../../public/alejo.jpg";
 import Image from "next/image";
+import Loading from "../Loading/Loadin";
 
 const Home = () => {
   return (
@@ -29,7 +30,15 @@ const Home = () => {
           </div>
 
           <div className={style.imgcontainer}>
-            <Image className={style.mainImage} src={ale} alt="Alejo Holmann" />
+            {ale ? (
+              <Image
+                className={style.mainImage}
+                src={ale}
+                alt="Alejo Holmann"
+              />
+            ) : (
+              <Loading />
+            )}
           </div>
         </div>
       </div>
