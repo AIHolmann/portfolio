@@ -9,10 +9,10 @@
 
 .container h2 {
   text-align: center;
-  color: whitesmoke;
+  color: darkslategray;
   font-size: 40px;
-  letter-spacing: 6px;
-  font-weight: 100;
+  letter-spacing: 4px;
+  font-weight: 400;
 }
 
 .subcontainer {
@@ -21,10 +21,10 @@
   flex-direction: column;
   margin-top: 60px;
   width: 75%;
-  color: whitesmoke;
+  color: #282828;
   font-size: clamp(20px, 30px, 30px);
   letter-spacing: 3px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .principales {
@@ -34,7 +34,6 @@
 
 .principales > summary {
   box-sizing: border-box;
-  /*border: 1px solid black;*/
   padding: 15px;
   cursor: pointer;
   list-style: none;

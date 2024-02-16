@@ -8,10 +8,10 @@
 }
 
 .all h2 {
-  color: whitesmoke;
+  color: darkslategray;
   font-size: 40px;
-  letter-spacing: 6px;
-  font-weight: 100;
+  letter-spacing: 4px;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .indicator_symbol_active {
-  color: whitesmoke;
+  color: gray;
   font-size: large;
 }
 /*display: flex;

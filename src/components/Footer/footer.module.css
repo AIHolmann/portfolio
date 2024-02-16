@@ -8,7 +8,7 @@
       transparent 59%
     ),
     radial-gradient(at 82% 65%, hsl(254.53, 100%, 63%) 0, transparent 55%);*/
-  border-top: 3px ridge #4f6dff;
+  border-top: 3px ridge #dbd4b470;
   margin-left: 35px;
   margin-right: 35px;
   display: flex;

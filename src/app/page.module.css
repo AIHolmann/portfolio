@@ -1,23 +1,50 @@
 .all {
   min-height: 500vh;
-  background-color: #6f41ff;
-  background-image: radial-gradient(
+  /*background-color: #6f41ff;
+   background-image: radial-gradient(
       at 47% 33%,
       hsl(194.87, 100%, 53%) 0,
       transparent 59%
     ),
-    radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);
+    radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);*/
+
+  background: #cc95c0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #7aa1d2,
+    #dbd4b4,
+    #cc95c0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #7aa1d2,
+    #dbd4b4,
+    #cc95c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .allblack {
   min-height: 500vh;
-  background-color: #282828;
+  /*background-color: #282828;
   background-image: radial-gradient(
       at 47% 33%,
       hsl(218.24, 100%, 53%) 0,
       transparent 59%
     ),
-    radial-gradient(at 82% 65%, hsl(254.53, 100%, 62%) 0, transparent 55%);
+    radial-gradient(at 82% 65%, hsl(254.53, 100%, 62%) 0, transparent 55%);*/
+  background: #966e8d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5b789c,
+    #777362,
+    #966e8d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5b789c,
+    #777362,
+    #966e8d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
