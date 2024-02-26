@@ -1,13 +1,5 @@
 .all {
   min-height: 500vh;
-  /*background-color: #6f41ff;
-   background-image: radial-gradient(
-      at 47% 33%,
-      hsl(194.87, 100%, 53%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 82% 65%, hsl(218.24, 100%, 62%) 0, transparent 55%);*/
-
   background: #cc95c0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -21,17 +13,11 @@
     #dbd4b4,
     #cc95c0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-y: hidden;
 }
 
 .allblack {
   min-height: 500vh;
-  /*background-color: #282828;
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(218.24, 100%, 53%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 82% 65%, hsl(254.53, 100%, 62%) 0, transparent 55%);*/
   background: #966e8d; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -47,6 +33,17 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1500;
+  transition: 200ms ease-out;
+  pointer-events: none;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   .all,
   .allblack {
@@ -58,5 +55,8 @@
   .all,
   .allblack {
     min-height: 300vh;
+  }
+  .cursor {
+    display: none;
   }
 }

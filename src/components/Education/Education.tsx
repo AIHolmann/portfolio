@@ -1,12 +1,20 @@
+import { useState } from "react";
 import style from "./education.module.css";
+import CustomSummary from "./customSummary/CustomSummary";
 
 const Education = () => {
+  const titles = {
+    title1: "Professional Education",
+    title2: "Supplementary Education",
+    title3: "Languages",
+  };
+
   return (
     <div className={style.container}>
       <h2>Education</h2>
       <div className={style.subcontainer}>
         <details className={style.principales}>
-          <summary>Professional Education</summary>
+          <CustomSummary title={titles.title1} />
           <details className={style.secundarios}>
             <summary>Full Stack Web Developer</summary>
             <p>
@@ -26,7 +34,7 @@ const Education = () => {
           </details>
         </details>
         <details className={style.principales}>
-          <summary>Supplementary Education</summary>
+          <CustomSummary title={titles.title2} />
           <details className={style.secundarios}>
             <summary>Language School</summary>
             <p>Set Idiomas. 2018.</p>
@@ -37,7 +45,7 @@ const Education = () => {
           </details>
         </details>
         <details className={style.principales}>
-          <summary>Languages</summary>
+          <CustomSummary title={titles.title3} />
           <details className={style.secundarios}>
             <summary>English C1</summary>
             <p>Advanced - Conversational level: Intermediate</p>

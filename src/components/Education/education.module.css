@@ -37,6 +37,39 @@
   padding: 15px;
   cursor: pointer;
   list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.principales summary svg {
+  margin-right: 5px;
+}
+
+.slideIn {
+  animation: spin 0.4s ease-out;
+  transform: rotate(180deg);
+}
+
+.slideOut {
+  animation: spinOut 0.25s ease-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+@keyframes spinOut {
+  0% {
+    transform: rotate(540deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .principales details {

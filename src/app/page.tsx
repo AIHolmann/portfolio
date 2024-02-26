@@ -20,12 +20,34 @@ const Index = () => {
     setDomLoaded(true);
   }, []);
 
+  useEffect(() => {
+    let animationFrameId: any = null;
+
+    const moveCursor = (e: any) => {
+      animationFrameId = requestAnimationFrame(() => {
+        const cursor = document.getElementById("cursor");
+        cursor?.setAttribute(
+          "style",
+          `top: ${e.pageY - 10}px; left: ${e.pageX - 10}px;`
+        );
+      });
+    };
+
+    document.addEventListener("mousemove", moveCursor);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      document.removeEventListener("mousemove", moveCursor);
+    };
+  }, []);
+
   return (
     domLoaded && (
       <div
         className={mode === "light" ? style.all : style.allblack}
         id="allApp"
       >
+        <div className={style.cursor} id="cursor"></div>
         <div id="home">
           <Home />
         </div>
