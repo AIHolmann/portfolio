@@ -1,16 +1,32 @@
+import { useState, useRef, useEffect } from "react";
 import style from "./contact.module.css";
 import Link from "next/link";
 
 const Contact = () => {
+  const myRef = useRef<HTMLDivElement>(null);
+  const [myElementIsVisible, setMyElementIsVisible] = useState(Boolean);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    if (myRef.current) observer.observe(myRef.current);
+  }, []);
+
   return (
     <div className={style.container}>
       <h2>Contact me</h2>
-      <h4>
+      <h4 className={myElementIsVisible ? style.animatedCard : style.hidden}>
         If you are interested in <b>hiring me</b>, let me know, <b>send me</b>{" "}
         an email or <b>connect</b> and write to me via LinkedIn.
       </h4>
-
-      <div className={style.card}>
+      <div
+        className={`${style.card} ${
+          myElementIsVisible ? style.animatedCard : style.hidden
+        }`}
+        ref={myRef}
+      >
         <div>
           <Link
             href={"mailto:alejoholmann99@gmail.com"}
