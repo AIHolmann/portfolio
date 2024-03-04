@@ -26,7 +26,8 @@
   background-color: #7aa1d279;
   backdrop-filter: blur(3px);
   z-index: 1000;
-  padding-top: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .hidden {

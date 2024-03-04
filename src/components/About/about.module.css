@@ -37,7 +37,7 @@
   width: 450px;
   font-size: 23px;
 
-  text-align: justify;
+  text-align: start;
   word-spacing: 0.1em;
 }
 .card div {
@@ -67,9 +67,9 @@
 }
 
 .cardplane p {
-  font-size: clamp(16px, 24px, 32px);
+  font-size: clamp(16px, 20px, 30px);
   letter-spacing: 2px;
-  text-align: justify;
+  text-align: center;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
