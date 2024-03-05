@@ -6,12 +6,6 @@
 .slideOut {
   animation: spinOut 0.25s ease-out;
 }
-/*
-.svgcontainer {
-  min-width: 10px;
-  min-height: 10px;
-  display: inline-block;
-}*/
 
 @keyframes spin {
   0% {

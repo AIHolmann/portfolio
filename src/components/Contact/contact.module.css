@@ -27,7 +27,7 @@
 }
 
 .card {
-  width: 90%;
+  width: 70%;
   height: 80%;
   border-top: 2px solid #ffffff75;
   border-left: 2px solid #ffffff75;
@@ -55,10 +55,16 @@
   transition: 0.1s ease-in-out;
 }
 
-.link h5:hover {
+.link:hover h5 {
   scale: 1.1;
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5),
     2px 2px 2px rgba(160, 160, 160, 0.4), 3px 3px 3px rgba(160, 160, 160, 0.1);
+}
+
+.svgcontainer {
+  min-width: 8px;
+  min-height: 8px;
+  display: inline-block;
 }
 
 .hidden {
@@ -104,9 +110,14 @@
     margin-right: 5px;
   }
 
+  .card {
+    padding: 1px;
+  }
+
   .link {
     font-size: 14px;
     letter-spacing: 1px;
+    padding: 10px 15px 10px 15px;
   }
   .link h5 {
     font-weight: 500;
@@ -120,5 +131,11 @@
   .link svg {
     width: 25px;
     height: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card {
+    width: 90%;
   }
 }
