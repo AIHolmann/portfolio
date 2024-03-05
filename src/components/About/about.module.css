@@ -13,7 +13,7 @@
   height: 490px;
 }
 .back:hover {
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
 }
 
@@ -21,7 +21,7 @@
   backdrop-filter: blur(15px) saturate(200%);
   -webkit-backdrop-filter: blur(15px) saturate(200%);
   background-color: rgba(17, 25, 40, 0.26);
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   width: 850px;
   height: 490px;
@@ -36,7 +36,6 @@
 .card article {
   width: 450px;
   font-size: 23px;
-
   text-align: start;
   word-spacing: 0.1em;
 }
@@ -60,7 +59,7 @@
   border-left: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
   background: #ffffff25;
-  border-radius: 15px;
+  border-radius: 8px;
   overflow: hidden;
   backdrop-filter: blur(4px);
   padding: 25px;

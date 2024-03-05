@@ -23,7 +23,7 @@
 .content {
   flex: 2 1 300px;
   padding: 10px;
-  text-align: justify;
+  text-align: start;
   margin-top: 15px;
 }
 

@@ -50,20 +50,19 @@
 .carousel_item_text {
   font-size: 1.35rem;
   font-weight: 200;
-  margin: 40px 0 20px 10px;
+  margin: 30px 0 20px 10px;
   padding: 0 20px 0 20px;
   white-space: normal;
   color: whitesmoke;
+  background-color: #383838f0;
 }
 
 .texto h3 {
-  font-size: 2rem;
-  font-weight: 300;
-  background-color: #282828c0;
+  font-size: 3.35rem;
+  font-weight: 400;
 }
 
 .texto div {
-  background-color: #282828c0;
   text-align: justify;
 }
 
