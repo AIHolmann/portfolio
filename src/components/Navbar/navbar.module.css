@@ -169,6 +169,10 @@
   display: none;
 }
 
+.list li a svg {
+  display: none;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   .list li a {
     font-size: 16px;
@@ -208,17 +212,32 @@
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .list li {
     display: block;
-    margin: 30px 0;
+    margin: 20px 0;
     line-height: 20px;
+    margin-left: 25%;
+  }
+
+  .list li:last-child {
+    margin-left: 0px;
+    display: flex;
+    align-self: center;
   }
 
   .list li a {
     font-size: 20px;
     color: whitesmoke;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .list li a svg {
+    display: block;
+    margin-right: 10px;
   }
 
   .list li a:hover,
