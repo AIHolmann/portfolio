@@ -44,7 +44,9 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
               </div>
             )}
             <div className={style.texto}>
-              <h3 className={style.carousel_item_text}>{data.name}</h3>
+              <h3 className={style.carousel_item_text}>
+                <b>{data.name}</b>
+              </h3>
               <div className={style.carousel_item_text}>
                 <p>{data.description}</p>
               </div>
