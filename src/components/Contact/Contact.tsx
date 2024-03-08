@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import style from "./contact.module.css";
 import Link from "next/link";
+import BtnDownload from "../Btndownload/BtnDownload";
 
 const Contact = () => {
   const myRef = useRef<HTMLDivElement>(null);
@@ -143,6 +144,9 @@ const Contact = () => {
             </div>
             <h5>AIHolmann</h5>
           </Link>
+        </div>
+        <div className={style.btncontainer}>
+          <BtnDownload />
         </div>
       </div>
     </div>
