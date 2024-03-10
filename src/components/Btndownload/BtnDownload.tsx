@@ -2,19 +2,13 @@ import style from "./btndownload.module.css";
 import Link from "next/link";
 
 const BtnDownload = () => {
-  /* const downloadPDF = () => {
-    const aTag = document.createElement("a");
-    aTag.href = "http://localhost:3000/public/CVResume.pdf";
-    aTag.setAttribute("download", "CVResume.pdf");
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
-    console.log("se ejecuto");
-  };*/
-
   return (
     <button className={style.btn}>
-      <Link className={style.link} href="/CVResume.pdf" download="CVResume.pdf">
+      <Link
+        className={style.link}
+        href="/CVResume_AlejoHolmann.pdf"
+        download="CVResume_AlejoHolmann.pdf"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

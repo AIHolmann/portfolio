@@ -11,10 +11,21 @@ import Btntop from "@/components/Btntop/Btntop";
 import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import BtnModal from "@/components/Btnmodal/BtnModal";
 
 const Index = () => {
   const mode = useSelector((state: RootState) => state.mode.value);
   const [domLoaded, setDomLoaded] = useState(false);
+
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const inner = window.innerWidth;
+      setWindowWidth(inner);
+    }
+  }, []);
 
   useEffect(() => {
     setDomLoaded(true);
@@ -48,8 +59,13 @@ const Index = () => {
         id="allApp"
       >
         <div className={style.cursor} id="cursor"></div>
-        <div id="home">
+        <div id="home" className={style.home}>
           <Home />
+          {windowWidth > 425 && (
+            <div className={style.positionbtn}>
+              <BtnModal />
+            </div>
+          )}
         </div>
         <div id="stack">
           <Stack />

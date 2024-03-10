@@ -1,0 +1,7 @@
+.btn svg g {
+  color: #282828;
+}
+
+.btn:hover svg g {
+  fill: #7aa1d2;
+}
