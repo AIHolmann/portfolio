@@ -18,7 +18,6 @@
 }
 
 .scroll_up {
-  /* position: fixed; */
   right: 3rem;
   bottom: -50%;
   z-index: 10;
@@ -39,7 +38,6 @@
   transform: translateY(-0.25rem);
 }
 
-/* Show scroll-up */
 ._show-scroll {
   bottom: 3rem;
 }

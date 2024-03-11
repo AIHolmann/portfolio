@@ -1,6 +1,5 @@
 .container {
-  /*width: 350px;*/
-  width: 30vh;
+  width: 90vw;
   margin: 10px 4px 10px 4px;
   border: 1px solid black;
   border-radius: 12px;
@@ -13,7 +12,7 @@
 }
 
 .thumbnail img {
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .loader {
@@ -29,7 +28,9 @@
 }
 
 .content h5 {
-  font-size: 24px;
+  font-size: 26px;
+  color: #282828;
+  font-weight: 600;
 }
 
 .content p {
@@ -58,13 +59,3 @@
   border: 1px solid black;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
-/*
-.container {
-  flex-grow: 0;
-  flex-basis: 200;
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-}
-*/
