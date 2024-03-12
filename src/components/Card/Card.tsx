@@ -3,6 +3,7 @@ import Image from "next/image";
 import style from "./card.module.css";
 import Link from "next/link";
 import Loading from "../Loading/Loadin";
+import CustomSummary from "../Education/customSummary/CustomSummary";
 
 interface ProjectData {
   name: string;
@@ -33,16 +34,22 @@ const Card: React.FC<CarouselProps> = ({ data }) => {
       </div>
       <div className={style.content}>
         <h5>{data.name}</h5>
-        <p>{data.description}</p>
-        <ul>
-          {data.stack.map((el, i) => {
-            return (
-              <li key={i} className={style.cardStack}>
-                {el}
-              </li>
-            );
-          })}
-        </ul>
+        <details>
+          <CustomSummary title="More info..."></CustomSummary>
+          <p>{data.description}</p>
+        </details>
+        <div className={style.ulcontainer}>
+          <h6>Stack:</h6>
+          <ul>
+            {data.stack.map((el, i) => {
+              return (
+                <li key={i} className={style.cardStack}>
+                  {el}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
