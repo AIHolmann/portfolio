@@ -1,8 +1,6 @@
 import Navbar from "../Navbar/Navbar";
 import style from "./home.module.css";
-import ale from "../../../public/alejo.jpg";
-import Image from "next/image";
-import Loading from "../Loading/Loadin";
+import { CldImage } from "next-cloudinary";
 
 const Home = () => {
   return (
@@ -30,15 +28,14 @@ const Home = () => {
           </div>
 
           <div className={style.imgcontainer}>
-            {ale ? (
-              <Image
-                className={style.mainImage}
-                src={ale}
-                alt="Alejo Holmann"
-              />
-            ) : (
-              <Loading />
-            )}
+            <CldImage
+              className={style.mainImage}
+              src="https://res.cloudinary.com/datlb3rvw/image/upload/v1712884261/AlejoPortfolio/alejo_ulqkzq.jpg"
+              alt="Alejo Holmann"
+              width={1000}
+              height={1000}
+              seoSuffix="Alejo Holmann Full-Stack web developer"
+            />
           </div>
         </div>
       </div>

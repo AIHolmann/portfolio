@@ -1,17 +1,16 @@
 "use client";
 import style from "./carousel.module.css";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Loading from "../Loading/Loadin";
+import { CldImage } from "next-cloudinary";
 
 interface ProjectData {
   name: string;
   description: string;
   stack: string[];
   link: string;
-  image: StaticImageData;
+  image: string;
   id: number;
 }
 
@@ -33,10 +32,13 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
         <div>
           <Link href={data.link} target="_blank">
             {data.image ? (
-              <Image
+              <CldImage
                 className={style.carousel_img}
                 alt={data.name}
                 src={data.image}
+                width={1080}
+                height={100}
+                seoSuffix={data.name}
               />
             ) : (
               <div className={style.carousel_loading}>

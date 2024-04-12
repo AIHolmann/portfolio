@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 import Image from "next/image";
 import style from "./card.module.css";
 import Link from "next/link";
@@ -10,7 +9,7 @@ interface ProjectData {
   description: string;
   stack: string[];
   link: string;
-  image: StaticImageData;
+  image: string;
   id: number;
 }
 

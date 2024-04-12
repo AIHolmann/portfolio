@@ -1,13 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import portfolio from "../../../public/alejo_holmann.gif";
-import lapilcha from "../../../public/la_pilcha.gif";
-import rickandmorty from "../../../public/rick_morty.gif";
 import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
 import Card from "../Card/Card";
-import videogames from "../../../public/video_games.gif";
-import jalil from "../../../public/jalil_barber.gif";
 
 const data = [
   {
@@ -16,7 +11,8 @@ const data = [
       "Professional page, designed and developed by me for a barber shop.",
     stack: ["HTML", "CSS", "JavaScript", "Next14"],
     link: "https://jalil-barber.vercel.app/",
-    image: jalil,
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948398/AlejoPortfolio/jalil_barber_yrte9e.gif",
     id: 5,
   },
   {
@@ -25,7 +21,8 @@ const data = [
       "Personal Portfolio, designed and developed by me. It features a night mode and simple functionalities. Statistics dashboard in development",
     stack: ["HTML", "CSS", "TypeScript", "Redux Toolkit"],
     link: "https://github.com/AIHolmann/portfolio",
-    image: portfolio,
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948403/AlejoPortfolio/alejo_holmann_nuwfxc.gif",
     id: 4,
   },
   {
@@ -41,7 +38,8 @@ const data = [
       "MongoDB",
     ],
     link: "https://pf-la-pilcha.vercel.app/",
-    image: lapilcha,
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948397/AlejoPortfolio/la_pilcha_zgyixv.gif",
     id: 3,
   },
   {
@@ -50,7 +48,8 @@ const data = [
       "An application in the style of a 'pokédex' with the theme of the animated series 'Rick and Morty'. It features a complete CRUD, user authentication, a favorite selection system, and combined filters.",
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
     link: "https://github.com/AIHolmann/Rick_and_Morty_new",
-    image: rickandmorty,
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948394/AlejoPortfolio/rick_morty_xzoxis.gif",
     id: 2,
   },
   {
@@ -59,7 +58,8 @@ const data = [
       "Final individual project from the Henry academy. It features a complete CRUD and displays the stock of video games from an API. With a relational database to store user-created video games, it allows interaction with combined filters.",
     stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
     link: "https://github.com/AIHolmann/PI_VideoGames",
-    image: videogames,
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948389/AlejoPortfolio/video_games_gkhtsa.gif",
     id: 1,
   },
 ];
