@@ -34,14 +34,17 @@ export default function RootLayout({
             name="google-site-verification"
             content="Qt6LLAaZqw8KrWnM4QaqIF9lbf9d9wqK05r7o_rXJk8"
           />
-          <meta property="og:title" content="Alejo Holmann Web Developer" />
+          <meta
+            property="og:title"
+            content="Alejo Holmann Full-Stack Web Developer"
+          />
           <meta
             property="og:description"
-            content="Alejo Holmann is a full-stack web developer focused on the JavaScript and React ecosystem."
+            content="Based on the JavaScript ecosystem, specialized in React, I deliver practical and effective solutions."
           />
           <meta
             property="og:image"
-            content="https://res.cloudinary.com/datlb3rvw/image/upload/v1713932352/AlejoPortfolio/imagenesNuevas/imagenPagina_ribgvm.webp"
+            content="https://res.cloudinary.com/datlb3rvw/image/upload/v1713938404/AlejoPortfolio/imagenesNuevas/Dise%C3%B1o_sin_t%C3%ADtulo_jw2dcf.webp"
           />
           <meta
             property="og:url"
