@@ -6,60 +6,120 @@ import Card from "../Card/Card";
 
 const data = [
   {
+    name: "NextCRUD",
+    description:
+      'Task management application. It allows you to create, display, update and delete them. It uses the "Prisma" ORM and has a REST API integrated into the same project (an option that Next.js gives us for small projects)',
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Next.14",
+      "Tailwind",
+      "Prisma",
+      "PostgreSQL",
+      "VercelCLI",
+    ],
+    link: "https://nextjs-prisma-crud-nbds3ylg8-alejo-s-projects.vercel.app/",
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928339/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_45_50_hb3p4i.webp",
+    id: 7,
+  },
+  {
+    name: "PerdonApp",
+    description:
+      '"PerdonApp", a friendly application to apologize to your favorite person in a very special and unique way. Try it now!',
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Next.14",
+      "react-toastify",
+      "react-hook-form",
+    ],
+    link: "https://perdonapp.vercel.app/",
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928335/AlejoPortfolio/imagenesNuevas/Perdon.App_-_Original_Way_to_Apologize_to_Your_Favorite_Person_-_Google_Chrome_24_04_2024_0_06_34_fpc2q5.webp",
+    id: 6,
+  },
+  {
     name: "Jalil Barber",
     description:
       "Professional page, designed and developed by me for a barber shop.",
-    stack: ["HTML", "CSS", "JavaScript", "Next14"],
+    stack: ["HTML", "CSS", "JavaScript", "Next.14"],
     link: "https://jalil-barber.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948398/AlejoPortfolio/jalil_barber_yrte9e.gif",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928338/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_46_37_ead4wm.webp",
     id: 5,
   },
   {
     name: "Portfolio",
     description:
       "Personal Portfolio, designed and developed by me. It features a night mode and simple functionalities. Statistics dashboard in development",
-    stack: ["HTML", "CSS", "TypeScript", "Redux Toolkit"],
+    stack: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Next.14",
+      "Redux Toolkit",
+      "Cloudinary",
+    ],
     link: "https://github.com/AIHolmann/portfolio",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948403/AlejoPortfolio/alejo_holmann_nuwfxc.gif",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928337/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_47_19_sfiuiw.webp",
     id: 4,
   },
   {
     name: "LaPilcha",
     description:
-      "Final project by students from the Henry academy, collaborating and developing as a team. LaPilcha is an e-commerce project that offers an online clothing store. It features a complete CRUD and enables users to browse and purchase various fashionable items, select favorites, save them in the shopping cart, create users with Auth0, an integrated payment gateway with 'MercadoPago' for secure transactions, correspondence emails from an SMTP server, and an extensive admin dashboard among other functions.",
+      "Final project by students from the Henry academy. An e-commerce project, that features a complete CRUD and enables users to browse and purchase various items, select favorites, save them in the shopping cart, create users with Auth0, an integrated payment gateway with 'MercadoPago' for secure transactions, correspondence emails from an SMTP server, and an extensive admin dashboard among other functions.",
     stack: [
       "HTML",
-      "Tailwind CSS",
+      "TailwindCSS",
       "TypeScript",
-      "Redux Toolkit",
+      "Next.13",
+      "ReduxToolkit",
       "Node.js",
       "MongoDB",
     ],
     link: "https://pf-la-pilcha.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948397/AlejoPortfolio/la_pilcha_zgyixv.gif",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928336/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_47_35_h9t21m.webp",
     id: 3,
   },
   {
     name: "Rick and Morty App",
     description:
       "An application in the style of a 'pokédex' with the theme of the animated series 'Rick and Morty'. It features a complete CRUD, user authentication, a favorite selection system, and combined filters.",
-    stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "create-react-app",
+      "Redux",
+      "Node.js",
+      "PostgreSQL",
+    ],
     link: "https://github.com/AIHolmann/Rick_and_Morty_new",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948394/AlejoPortfolio/rick_morty_xzoxis.gif",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928335/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_50_12_kb5cik.webp",
     id: 2,
   },
   {
     name: "VideoGames App",
     description:
       "Final individual project from the Henry academy. It features a complete CRUD and displays the stock of video games from an API. With a relational database to store user-created video games, it allows interaction with combined filters.",
-    stack: ["HTML", "CSS", "JavaScript", "Redux", "Node.js", "PostgreSQL"],
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "create-react-app",
+      "Redux",
+      "Node.js",
+      "PostgreSQL",
+    ],
     link: "https://github.com/AIHolmann/PI_VideoGames",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1712948389/AlejoPortfolio/video_games_gkhtsa.gif",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928336/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_53_45_oje9yu.webp",
     id: 1,
   },
 ];
