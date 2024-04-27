@@ -1,8 +1,8 @@
-import Image from "next/image";
 import style from "./card.module.css";
 import Link from "next/link";
 import Loading from "../Loading/Loadin";
 import CustomSummary from "../Education/customSummary/CustomSummary";
+import { CldImage } from "next-cloudinary";
 
 interface ProjectData {
   name: string;
@@ -23,7 +23,13 @@ const Card: React.FC<CarouselProps> = ({ data }) => {
       <div className={style.thumbnail}>
         <Link href={data.link} target="_blank">
           {data.image ? (
-            <Image alt={data.name} src={data.image} />
+            <CldImage
+              alt={data.name}
+              src={data.image}
+              width={1080}
+              height={100}
+              seoSuffix={data.name}
+            />
           ) : (
             <div className={style.loader}>
               <Loading />
