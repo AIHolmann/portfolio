@@ -2,7 +2,7 @@ import style from "./card.module.css";
 import Link from "next/link";
 import Loading from "../Loading/Loadin";
 import CustomSummary from "../Education/customSummary/CustomSummary";
-import { CldImage } from "next-cloudinary";
+import dynamic from "next/dynamic";
 
 interface ProjectData {
   name: string;
@@ -18,23 +18,29 @@ interface CarouselProps {
 }
 
 const Card: React.FC<CarouselProps> = ({ data }) => {
+  const CldImage = dynamic(
+    () => import("next-cloudinary").then((mod) => mod.CldImage),
+    {
+      loading: () => (
+        <div className={style.loader}>
+          <Loading />
+        </div>
+      ),
+      ssr: false,
+    }
+  );
+
   return (
     <div className={style.container}>
       <div className={style.thumbnail}>
         <Link href={data.link} target="_blank">
-          {data.image ? (
-            <CldImage
-              alt={data.name}
-              src={data.image}
-              width={1080}
-              height={720}
-              seoSuffix={data.name}
-            />
-          ) : (
-            <div className={style.loader}>
-              <Loading />
-            </div>
-          )}
+          <CldImage
+            alt={data.name}
+            src={data.image}
+            width={1080}
+            height={720}
+            seoSuffix={data.name}
+          />
         </Link>
       </div>
       <div className={style.content}>

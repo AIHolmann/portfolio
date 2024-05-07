@@ -1,8 +1,14 @@
+import Loading from "../Loading/Loadin";
 import Navbar from "../Navbar/Navbar";
 import style from "./home.module.css";
-import { CldImage } from "next-cloudinary";
+import dynamic from "next/dynamic";
 
 const Home = () => {
+  const CldImage = dynamic(
+    () => import("next-cloudinary").then((mod) => mod.CldImage),
+    { loading: () => <Loading />, ssr: false }
+  );
+
   return (
     <>
       <div className={style.alejoback}>
