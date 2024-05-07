@@ -35,6 +35,7 @@ const Home = () => {
               width={1000}
               height={1000}
               seoSuffix="Alejo Holmann Full-Stack web developer"
+              priority={true}
             />
           </div>
         </div>
