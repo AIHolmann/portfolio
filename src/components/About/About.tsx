@@ -9,6 +9,12 @@ const About = () => {
   const [edad, setEdad] = useState("0");
 
   useEffect(() => {
+    fetch("api/personalinformation")
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       if (typeof window !== "undefined") {
         const inner = window.innerWidth;
