@@ -48,7 +48,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
               alt={data.name}
               src={data.image}
               width={1080}
-              height={720}
+              height={540}
               seoSuffix={data.name}
             />
 
