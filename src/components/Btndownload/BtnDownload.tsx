@@ -8,6 +8,7 @@ const BtnDownload = () => {
         className={style.link}
         href="/CVResume_AlejoHolmann.pdf"
         download="CVResume_AlejoHolmann.pdf"
+        title="Download my resume"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

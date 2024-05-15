@@ -33,6 +33,7 @@ const Contact = () => {
             href={"mailto:alejoholmann99@gmail.com"}
             target="_blank"
             className={style.link}
+            title="Send me an email"
           >
             <div className={style.svgcontainer}>
               <svg
@@ -84,6 +85,7 @@ const Contact = () => {
             href={"https://www.linkedin.com/in/alejo-holmann-a51262221/"}
             target="_blank"
             className={style.link}
+            title="Connect and write me"
           >
             <div className={style.svgcontainer}>
               <svg
@@ -128,6 +130,7 @@ const Contact = () => {
             href={"https://github.com/AIHolmann"}
             target="_blank"
             className={style.link}
+            title="Take a look"
           >
             <div className={style.svgcontainer}>
               <svg
