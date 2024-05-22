@@ -6,6 +6,15 @@ import Card from "../Card/Card";
 
 const data = [
   {
+    name: "desing-darkui-1",
+    description: "Technical test project for a frontend web developer position",
+    stack: ["HTML", "CSS", "JavaScript", "Next.14"],
+    link: "https://desing-darkui-1.vercel.app/",
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1716340936/AlejoPortfolio/imagenesNuevas/desing-sarkui-1_buot0z.webp",
+    id: 8,
+  },
+  {
     name: "NextCRUD",
     description:
       'Task management application. It allows you to create, display, update and delete them. It uses the "Prisma" ORM and has a REST API integrated into the same project (an option that Next.js gives us for small projects)',
