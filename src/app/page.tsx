@@ -12,6 +12,7 @@ import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import BtnModal from "@/components/Btnmodal/BtnModal";
+import MainSection from "@/components/Mainsection/MainSection";
 
 const Index = () => {
   const mode = useSelector((state: RootState) => state.mode.value);
@@ -73,6 +74,11 @@ const Index = () => {
         <div id="aboutme">
           <About />
         </div>
+        {/*
+         <div id="mainsection">
+          <MainSection />
+        </div>
+        */}
         <div id="proyects">
           <Proyects />
         </div>
