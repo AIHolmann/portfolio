@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["200", "400"],
+  weight: ["200", "400", "100", "300", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({
