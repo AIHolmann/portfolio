@@ -4,6 +4,7 @@ import Time from "./Time/Time";
 import Stack from "./Stack/Stack";
 import Me from "./Me/Me";
 import Contact from "./Contactcard/Contactcard";
+import Current from "./Current/Current";
 
 const MainSection = () => {
   return (
@@ -31,7 +32,9 @@ const MainSection = () => {
               <Contact />
             </div>
           </div>
-          <div className={styles.secwrap}></div>
+          <div className={styles.secwrap}>
+            <Current />
+          </div>
         </div>
       </div>
     </section>
