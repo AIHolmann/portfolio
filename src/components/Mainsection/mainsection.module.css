@@ -8,7 +8,6 @@
 .maincontainer {
   height: 100%;
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +16,6 @@
 
 .firstcontainer,
 .secondcontainer {
-  border: 1px solid red;
   height: 48%;
   width: 100%;
   display: flex;
@@ -28,13 +26,14 @@
 .firstsubcont {
   height: 100%;
   width: 59%;
-  border: 1px solid red;
+  border-radius: 23px;
 }
-
+.firstsubcont > div {
+  border-radius: 14px;
+}
 .secondsubcont {
   height: 100%;
   width: 39%;
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,13 +46,18 @@
 .stack {
   height: 47%;
   width: 100%;
-  border: 1px solid green;
+}
+
+.time > div,
+.phrase > div,
+.contact > div,
+.stack > div {
+  border-radius: 14px;
 }
 
 .firstwrap {
   height: 100%;
   width: 29%;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,5 +67,54 @@
 .secwrap {
   height: 100%;
   width: 69%;
-  border: 1px solid pink;
+}
+.secwrap > div {
+  border-radius: 14px;
+}
+
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+  .section {
+    padding: 1rem 4rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .section {
+    padding: 1rem 1.5rem;
+  }
+
+  .maincontainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .firstcontainer,
+  .secondcontainer {
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .firstsubcont {
+    width: 100%;
+  }
+
+  .secondsubcont {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .firstwrap {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .secwrap {
+    width: 100%;
+  }
 }
