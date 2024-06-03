@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  perspective: 10px;
+  background: #111927
+    radial-gradient(rgba(80, 80, 80, 0.622) 10%, transparent 1%);
+  background-size: 11px 11px;
+}
+
+.titlecontainer {
+  height: 100%;
+  width: 30%;
+  text-align: left;
+  padding-left: 5px;
+  overflow: visible;
+  position: relative;
+}
+
+.titlecontainer h2 {
+  font-size: xx-large;
+  color: #f1f1f1;
+  position: absolute;
+  width: 200%;
+  z-index: 1;
+  top: 46%;
+  font-weight: 600;
+  text-shadow: 0px 0px 4px #282828, 0px 0px 4px #282828, 0px 0px 4px #282828,
+    0px 0px 4px #282828;
+}
+
+.titlecontainer p {
+  position: absolute;
+  width: 200%;
+  z-index: 1;
+  font-size: x-small;
+  color: #e4e4e4;
+  top: 40%;
+}
+
+.listcontainer {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow-y: hidden;
+  cursor: default;
+}
+
+.listcontainer ul li {
+  padding: 10px;
+  margin: 6px 2px;
+  border-radius: 4px;
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #f1f1f1;
+}
+
+.listcontainer ul {
+  animation: movement 8s infinite;
+}
+
+.listcontainer ul:nth-child(2) {
+  animation: movementchild2 9s infinite;
+}
+
+@keyframes movementchild2 {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes movement {
+  0% {
+    transform: translateY(20%);
+  }
+
+  50% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(20%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .titlecontainer h2 {
+    font-size: x-large;
+    top: 42%;
+    text-shadow: none;
+  }
+
+  .titlecontainer p {
+    position: absolute;
+    width: 200%;
+    font-size: small;
+    top: 32%;
+  }
+  .listcontainer ul li {
+    padding: 8px;
+    margin: 6px 2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titlecontainer {
+    padding-left: 12px;
+  }
+
+  .titlecontainer h2 {
+    font-size: large;
+    top: 55%;
+  }
+
+  .titlecontainer p {
+    position: absolute;
+    font-size: small;
+    top: 22%;
+  }
+  .listcontainer ul li {
+    padding: 6px;
+    margin: 3px 2px;
+    font-size: small;
+  }
+}

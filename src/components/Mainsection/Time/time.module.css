@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container div {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000000, 40%, transparent);
+  z-index: 98;
+}
+
+.container:hover .img {
+  transform: scale(1.4);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-width: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: 0.3s ease-in-out;
+}
+
+.container h2 {
+  position: absolute;
+  z-index: 99;
+  top: 15%;
+  left: 5%;
+  font-size: x-large;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.container h6 {
+  position: absolute;
+  z-index: 99;
+  font-size: small;
+  color: #b1b1b1;
+}
+
+.usa {
+  bottom: 15%;
+  left: 8%;
+}
+.argentina {
+  bottom: 5%;
+  left: 15%;
+}
+.europe {
+  top: 5%;
+  left: 45%;
+}
+.oceania {
+  bottom: 10%;
+  right: 15%;
+}
+
+@media screen and (max-width: 980px) {
+  .container h2 {
+    font-size: large;
+  }
+}

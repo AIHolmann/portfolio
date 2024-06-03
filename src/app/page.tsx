@@ -1,7 +1,5 @@
 "use client";
 import Home from "@/components/Home/Home";
-import About from "@/components/About/About";
-import Stack from "@/components/Stack/Stack";
 import Proyects from "@/components/Proyects/Proyects";
 import Education from "@/components/Education/Education";
 import Contact from "@/components/Contact/Contact";
@@ -68,17 +66,9 @@ const Index = () => {
             </div>
           )}
         </div>
-        <div id="stack">
-          <Stack />
-        </div>
-        <div id="aboutme">
-          <About />
-        </div>
-        {/*
-         <div id="mainsection">
+        <div id="mainsection">
           <MainSection />
         </div>
-        */}
         <div id="proyects">
           <Proyects />
         </div>
