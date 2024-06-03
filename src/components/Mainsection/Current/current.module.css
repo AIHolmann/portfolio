@@ -123,3 +123,17 @@
 .card:hover {
   transform: rotateX(20deg) perspective(350px) translateY(-5%) translateZ(0);
 }
+
+@media screen and (max-width: 550px) {
+  .text {
+    top: 10%;
+  }
+
+  .text span {
+    font-size: x-small;
+  }
+
+  .text h2 {
+    font-size: large;
+  }
+}

@@ -122,3 +122,29 @@
   height: 8px;
   margin: 1px 3px;
 }
+
+@media screen and (max-width: 980px) {
+  .container h2 {
+    font-size: medium;
+    top: 6%;
+    left: 16%;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container h2 {
+    font-size: medium;
+    top: 6%;
+    left: 10%;
+    width: 90%;
+  }
+
+  .container:hover h2 {
+    text-shadow: none;
+    letter-spacing: 1px;
+    top: 8%;
+    left: 8%;
+    width: 92%;
+    font-size: 19px;
+  }
+}

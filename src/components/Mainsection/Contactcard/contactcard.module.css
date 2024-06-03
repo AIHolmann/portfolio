@@ -95,3 +95,16 @@
     transform: translateY(20px);
   }
 }
+
+@media screen and (max-width: 500px) {
+  .container h2 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .container button {
+    padding: 4px 6px;
+    margin-top: 10%;
+    font-size: small;
+  }
+}

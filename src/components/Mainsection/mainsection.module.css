@@ -3,6 +3,7 @@
   height: 100vh;
   padding: 1rem 8rem;
   z-index: 1;
+  overflow: hidden;
 }
 
 .maincontainer {
@@ -80,8 +81,8 @@
 
 @media screen and (max-width: 980px) {
   .section {
-    padding: 1rem 1.5rem;
-    min-width: 100vw;
+    padding: 1rem 1rem;
+    width: 100vw;
     min-height: 100vh;
     height: 150vh;
   }
@@ -114,10 +115,18 @@
 
   .firstwrap {
     width: 100%;
-    justify-content: space-evenly;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
+  .phrase,
+  .contact {
+    width: 49%;
+    height: 98%;
+  }
   .secwrap {
     width: 100%;
+    height: 98%;
   }
 }

@@ -1,6 +1,14 @@
 import style from "./contactcard.module.css";
 
 const Contactcard = () => {
+  const copyMail = async () => {
+    try {
+      await navigator.clipboard.writeText("alejoholmann99@gmail.com");
+    } catch (err) {
+      console.error("Error al copiar: ", err);
+    }
+  };
+
   return (
     <div className={style.container}>
       <div>
@@ -8,7 +16,7 @@ const Contactcard = () => {
           Do you want to start
           <br /> a project together?
         </h2>
-        <button>
+        <button onClick={copyMail}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24px"
