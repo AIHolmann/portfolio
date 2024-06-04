@@ -1,18 +1,34 @@
 .all {
   min-height: 500vh;
-  background: #cc95c0; /* fallback for old browsers */
+  /* background: #cc95c0; 
   background: -webkit-linear-gradient(
     to right,
     #7aa1d2,
     #dbd4b4,
     #cc95c0
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #7aa1d2,
     #dbd4b4,
     #cc95c0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); */
+  background: #000319;
+}
+.Shopifly®---SaaS-1-hex {
+  color: #9904d9;
+}
+.Shopifly®---SaaS-2-hex {
+  color: #8e59d9;
+}
+.Shopifly®---SaaS-3-hex {
+  color: #020659;
+}
+.Shopifly®---SaaS-4-hex {
+  color: #d96e30;
+}
+.Shopifly®---SaaS-5-hex {
+  color: #f2f2f2;
 }
 
 .allblack {
