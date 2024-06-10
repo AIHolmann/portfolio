@@ -1,6 +1,6 @@
 .alejoback {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -12,76 +12,93 @@
   top: 0;
   left: 0;
   color: white;
-  padding-left: 100px;
-}
-
-@keyframes animateWords {
-  0% {
-    transform: translateY(0%);
-  }
-  25% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(-200%);
-  }
-  75% {
-    transform: translateY(-300%);
-  }
-  100% {
-    transform: translateY(-400%);
-  }
 }
 
 .conth1 {
   z-index: 999;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 
 .h1 {
-  font-size: 2.8em;
+  font-size: 190px;
+  font-weight: 900;
+  color: #f2f2f210;
+  user-select: none;
+}
+.contmain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 8%;
+  width: 60%;
+  height: 90vh;
 }
 
-.h1 > .span {
-  position: relative;
-  display: inline-block;
-  color: #ed242b;
-  height: 1.25em;
-  vertical-align: bottom;
-  overflow: hidden;
+.conttext {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.span > .span {
-  display: block;
-  animation: animateWords 8s infinite ease;
+.conttext h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.imgcontainer {
-  width: 100vh;
-  right: 0;
-  text-align: center;
+.conttext h2 > b {
+  letter-spacing: 4px;
 }
 
-.mainImage {
-  height: 75%;
-  object-fit: cover;
-  border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
-  overflow: hidden;
-  animation: flow 4s infinite ease-in-out;
+.conttext h3 {
+  text-align: left;
+  font-size: xx-large;
+  margin-top: 10px;
 }
 
-@keyframes flow {
-  0% {
-    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
-  }
-  35% {
-    border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
-  }
-  70% {
-    border-radius: 70% 90% 60% 70% / 80% 90% 50% 90%;
-  }
-  100% {
-    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
-  }
+.svg {
+  position: absolute;
+  top: -35%;
+  left: 0;
+}
+
+.button {
+  z-index: 999;
+  padding: 17px 26px;
+  background-color: #111927f7;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 4px;
+  transition: all 250ms;
+  touch-action: manipulation;
+  margin-top: 4%;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: 300;
+  word-spacing: 3px;
+}
+
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button:hover {
+  transform: translateY(-1.5px);
+}
+
+.button:active {
+  background-color: #111927;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
