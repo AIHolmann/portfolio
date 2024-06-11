@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
+import Arrowdown from "./arrowdown/Arrowdown";
 import Cardcounter from "./cardcounter/Cardcounter";
 import style from "./home.module.css";
 import { useState, useEffect, useRef } from "react";
@@ -76,31 +78,19 @@ const Home = () => {
                 I help you realize your <b>digital business</b> with software
                 that suit your needs.
               </h3>
-              <button className={style.button}>
-                <a href="#contact">Get started!</a>
-              </button>
+
+              <a href="#contact" className={style.button}>
+                <button>Get started!</button>
+              </a>
             </div>
             <div className={style.contcardcounter}>
               <Cardcounter />
             </div>
           </div>
         </div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="80px"
-          height="80px"
-          viewBox="0 0 24 24"
-          fill="none"
-          className={style.arrowdown}
-        >
-          <path
-            d="M7 10L12 15L17 10"
-            stroke="#000000"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <div className={style.arrowcontainer}>
+          <Arrowdown />
+        </div>
       </div>
     </>
   );

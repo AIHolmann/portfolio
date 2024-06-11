@@ -162,7 +162,7 @@ const Proyects = () => {
 
   return (
     <div className={style.all}>
-      <h2>Proyects</h2>
+      <h2>my proyects</h2>
       {windowWidth > 1280 ? (
         <div className={style.carousel}>
           <div
