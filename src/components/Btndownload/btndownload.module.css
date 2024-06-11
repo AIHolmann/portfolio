@@ -1,5 +1,5 @@
 .btn {
-  color: black;
+  color: #f2f2f2;
   border: 1.5px solid whitesmoke;
   background-color: #f2f2f248;
   height: 15vh;
@@ -24,11 +24,19 @@
 .btn .link svg {
   margin-right: 8px;
 }
+.btn svg g g path {
+  transition: all 0.2s ease-in-out 0ms;
+  stroke: #f2f2f2;
+}
 
 .btn:hover {
   color: rgba(0, 0, 0, 0.8);
-  background-color: #f2f2f227;
+  background-color: #dcdcdc;
   box-shadow: 0px 0px 20px -18px;
+}
+
+.btn:hover svg g g path {
+  stroke: rgba(0, 0, 0, 0.8);
 }
 
 .btn:active {

@@ -7,7 +7,7 @@
 }
 
 .all h2 {
-  color: darkslategray;
+  color: #f2f2f2;
   font-size: 40px;
   letter-spacing: 4px;
   font-weight: 400;
@@ -70,11 +70,11 @@
 }
 
 .indicator_symbol {
-  color: #26343f;
+  color: gray;
 }
 
 .indicator_symbol_active {
-  color: gray;
+  color: whitesmoke;
   font-size: x-large;
 }
 /*display: flex;

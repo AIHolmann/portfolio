@@ -3,7 +3,6 @@
 }
 
 .allblack {
-  min-height: 500vh;
   background: #966e8d;
   background: -webkit-linear-gradient(to right, #5b789c, #777362, #966e8d);
   background: linear-gradient(to right, #5b789c, #777362, #966e8d);

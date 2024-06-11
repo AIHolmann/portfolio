@@ -10,7 +10,7 @@
 
 .container h2 {
   text-align: center;
-  color: darkslategray;
+  color: #f2f2f2;
   font-size: 40px;
   letter-spacing: 4px;
   font-weight: 400;
@@ -18,7 +18,7 @@
 
 .container h4 {
   text-align: center;
-  color: #282828;
+  color: #e5e5e5;
   font-size: 30px;
   letter-spacing: 2px;
   font-weight: 400;
@@ -51,7 +51,7 @@
   justify-content: flex-start;
   font-weight: 400;
   padding: 15px 25px 15px 25px;
-  color: black;
+  color: #f2f2f2;
   font-size: 25px;
   letter-spacing: 2px;
 }
@@ -64,7 +64,10 @@
 .link:hover h5 {
   scale: 1.1;
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5),
-    2px 2px 2px rgba(160, 160, 160, 0.4), 3px 3px 3px rgba(160, 160, 160, 0.1);
+    1px 1px 1px rgba(160, 160, 160, 0.4), 1px 1px 1px rgba(160, 160, 160, 0.1);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: #e5e5e5;
 }
 
 .svgcontainer {
