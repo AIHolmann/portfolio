@@ -4,6 +4,11 @@
   overflow: hidden;
 }
 
+.setting {
+  position: absolute;
+  top: 38%;
+  left: 75%;
+}
 .container {
   display: flex;
   align-items: center;
@@ -17,8 +22,13 @@
 .conth1 {
   z-index: 999;
   position: absolute;
-  width: 100vw;
+  width: 200vw;
   height: 100vh;
+  overflow-x: visible;
+}
+
+.conth1 > h2 {
+  transform: translateX(-70vw);
 }
 
 .h1 {
@@ -36,7 +46,7 @@
   top: 0;
   left: 0;
   padding-left: 8%;
-  width: 60%;
+  width: 70%;
   height: 90vh;
 }
 
@@ -45,7 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .conttext h2 {
@@ -64,12 +74,6 @@
   margin-top: 10px;
 }
 
-.svg {
-  position: absolute;
-  top: -35%;
-  left: 0;
-}
-
 .button {
   z-index: 999;
   padding: 17px 26px;
@@ -78,7 +82,8 @@
   border-radius: 4px;
   transition: all 250ms;
   touch-action: manipulation;
-  margin-top: 4%;
+  margin-top: 3%;
+  margin-bottom: 4%;
   cursor: pointer;
   font-size: x-large;
   font-weight: 300;
@@ -99,6 +104,33 @@
   background-color: #111927;
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.arrowdown {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  10% {
+    height: 80px;
+    width: 80px;
+  }
+
+  50% {
+    height: 65px;
+    width: 90px;
+    transform: translateY(15px) translateX(-50%);
+  }
+
+  100% {
+    height: 80px;
+    width: 80px;
+    transform: translateY(0) translateX(-50%);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {

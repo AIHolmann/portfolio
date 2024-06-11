@@ -29,7 +29,7 @@ const Cardcounter = () => {
       } else {
         clearInterval(intervalId2);
       }
-    }, intervalo);
+    }, 320);
     return () => clearInterval(intervalId2);
   }, [count2]);
 
@@ -37,12 +37,12 @@ const Cardcounter = () => {
     <div className={style.container}>
       <div className={style.subcontainer}>
         <span>+ {count}</span>
-        <div>Proyectos terminados</div>
+        <div>Finished projects</div>
       </div>
       <div className={style.line}></div>
       <div className={style.subcontainer}>
         <span>+ {count2}</span>
-        <div>Países trabajados</div>
+        <div>Countries I have worked</div>
       </div>
     </div>
   );

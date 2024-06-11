@@ -1,54 +1,104 @@
+"use client";
 import Navbar from "../Navbar/Navbar";
 import Cardcounter from "./cardcounter/Cardcounter";
 import style from "./home.module.css";
+import { useState, useEffect, useRef } from "react";
 
 const Home = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const h1developer = useRef<HTMLHeadingElement>(null);
+  const h2developer = useRef<HTMLHeadingElement>(null);
+  const svgelement = useRef<SVGSVGElement>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      let position = window.scrollY;
+      setScrollPosition(position);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
+
+  useEffect(() => {
+    if (h1developer.current && h2developer.current && svgelement.current) {
+      h1developer.current.style.transform = `translateX(-${Math.floor(
+        scrollPosition
+      )}px)`;
+      h2developer.current.style.transform = `translateX(-${
+        70 - Math.floor(scrollPosition / 10)
+      }vw)`;
+      svgelement.current.style.transform = `rotate(${Math.floor(
+        scrollPosition
+      )}deg)`;
+    }
+  }, [scrollPosition]);
+
   return (
     <>
       <div className={style.alejoback}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="120px"
+          height="120px"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          ref={svgelement}
+          className={style.setting}
+        >
+          <path
+            d="M844.8 580.266667c2.133333-14.933333 4.266667-29.866667 4.266667-46.933334s-2.133333-32-4.266667-46.933333l96-68.266667c8.533333-6.4 12.8-19.2 6.4-29.866666L853.333333 230.4c-6.4-10.666667-17.066667-14.933333-27.733333-8.533333l-106.666667 49.066666c-25.6-19.2-51.2-34.133333-81.066666-46.933333L627.2 106.666667c-2.133333-10.666667-10.666667-19.2-21.333333-19.2h-183.466667c-10.666667 0-21.333333 8.533333-21.333333 19.2l-10.666667 117.333333c-29.866667 12.8-57.6 27.733333-81.066667 46.933333l-106.666666-49.066666c-10.666667-4.266667-23.466667 0-27.733334 8.533333l-91.733333 157.866667c-6.4 10.666667-2.133333 23.466667 6.4 29.866666l96 68.266667c-2.133333 14.933333-4.266667 29.866667-4.266667 46.933333s2.133333 32 4.266667 46.933334L85.333333 648.533333c-8.533333 6.4-12.8 19.2-6.4 29.866667L170.666667 836.266667c6.4 10.666667 17.066667 14.933333 27.733333 8.533333l106.666667-49.066667c25.6 19.2 51.2 34.133333 81.066666 46.933334l10.666667 117.333333c2.133333 10.666667 10.666667 19.2 21.333333 19.2h183.466667c10.666667 0 21.333333-8.533333 21.333333-19.2l10.666667-117.333333c29.866667-12.8 57.6-27.733333 81.066667-46.933334l106.666666 49.066667c10.666667 4.266667 23.466667 0 27.733334-8.533333l91.733333-157.866667c6.4-10.666667 2.133333-23.466667-6.4-29.866667l-89.6-68.266666zM512 746.666667c-117.333333 0-213.333333-96-213.333333-213.333334s96-213.333333 213.333333-213.333333 213.333333 96 213.333333 213.333333-96 213.333333-213.333333 213.333334z"
+            fill="#f2f2f210"
+          />
+          <path
+            d="M512 277.333333c-140.8 0-256 115.2-256 256s115.2 256 256 256 256-115.2 256-256-115.2-256-256-256z m0 362.666667c-59.733333 0-106.666667-46.933333-106.666667-106.666667s46.933333-106.666667 106.666667-106.666666 106.666667 46.933333 106.666667 106.666666-46.933333 106.666667-106.666667 106.666667z"
+            fill="#f2f2f212"
+          />
+        </svg>
         <Navbar />
         <div className={style.container}>
           <div className={style.conth1}>
-            <h1 className={style.h1}>full-stack web developer</h1>
+            <h1 className={style.h1} ref={h1developer}>
+              full-stack web developer
+            </h1>
+            <h2 className={style.h1} ref={h2developer}>
+              full-stack web developer
+            </h2>
           </div>
+
           <div className={style.contmain}>
             <div className={style.conttext}>
               <h2>
                 a <b>better</b> way to build software
               </h2>
               <h3>
-                I help you realize your digital business with software that suit
-                your needs.
+                I help you realize your <b>digital business</b> with software
+                that suit your needs.
               </h3>
-              <button className={style.button}>Get started!</button>
+              <button className={style.button}>
+                <a href="#contact">Get started!</a>
+              </button>
             </div>
             <div className={style.contcardcounter}>
               <Cardcounter />
             </div>
           </div>
-          <div className={style.contdibujos}></div>
         </div>
         <svg
-          className={style.svg}
           xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          id="visual"
-          viewBox="0 0 1920 1080"
-          width="1920"
-          height="1080"
-          version="1.1"
+          width="80px"
+          height="80px"
+          viewBox="0 0 24 24"
+          fill="none"
+          className={style.arrowdown}
         >
           <path
-            d="M0 487L26.7 487C53.3 487 106.7 487 160 467.2C213.3 447.3 266.7 407.7 320 386C373.3 364.3 426.7 360.7 480 402.2C533.3 443.7 586.7 530.3 640 503.3C693.3 476.3 746.7 335.7 800 342.8C853.3 350 906.7 505 960 568C1013.3 631 1066.7 602 1120 555.2C1173.3 508.3 1226.7 443.7 1280 411.3C1333.3 379 1386.7 379 1440 443.8C1493.3 508.7 1546.7 638.3 1600 629.3C1653.3 620.3 1706.7 472.7 1760 375.5C1813.3 278.3 1866.7 231.7 1893.3 208.3L1920 185L1920 0L1893.3 0C1866.7 0 1813.3 0 1760 0C1706.7 0 1653.3 0 1600 0C1546.7 0 1493.3 0 1440 0C1386.7 0 1333.3 0 1280 0C1226.7 0 1173.3 0 1120 0C1066.7 0 1013.3 0 960 0C906.7 0 853.3 0 800 0C746.7 0 693.3 0 640 0C586.7 0 533.3 0 480 0C426.7 0 373.3 0 320 0C266.7 0 213.3 0 160 0C106.7 0 53.3 0 26.7 0L0 0Z"
-            fill="#e2e2e200"
-          />
-          <path
-            d="M0 617L26.7 663.7C53.3 710.3 106.7 803.7 160 782C213.3 760.3 266.7 623.7 320 577C373.3 530.3 426.7 573.7 480 634.8C533.3 696 586.7 775 640 748C693.3 721 746.7 588 800 589.8C853.3 591.7 906.7 728.3 960 789.5C1013.3 850.7 1066.7 836.3 1120 782.3C1173.3 728.3 1226.7 634.7 1280 625.7C1333.3 616.7 1386.7 692.3 1440 751.7C1493.3 811 1546.7 854 1600 837.8C1653.3 821.7 1706.7 746.3 1760 690.7C1813.3 635 1866.7 599 1893.3 581L1920 563L1920 183L1893.3 206.3C1866.7 229.7 1813.3 276.3 1760 373.5C1706.7 470.7 1653.3 618.3 1600 627.3C1546.7 636.3 1493.3 506.7 1440 441.8C1386.7 377 1333.3 377 1280 409.3C1226.7 441.7 1173.3 506.3 1120 553.2C1066.7 600 1013.3 629 960 566C906.7 503 853.3 348 800 340.8C746.7 333.7 693.3 474.3 640 501.3C586.7 528.3 533.3 441.7 480 400.2C426.7 358.7 373.3 362.3 320 384C266.7 405.7 213.3 445.3 160 465.2C106.7 485 53.3 485 26.7 485L0 485Z"
-            fill="#f2f2f205"
-          />
-          <path
-            d="M0 1081L26.7 1081C53.3 1081 106.7 1081 160 1081C213.3 1081 266.7 1081 320 1081C373.3 1081 426.7 1081 480 1081C533.3 1081 586.7 1081 640 1081C693.3 1081 746.7 1081 800 1081C853.3 1081 906.7 1081 960 1081C1013.3 1081 1066.7 1081 1120 1081C1173.3 1081 1226.7 1081 1280 1081C1333.3 1081 1386.7 1081 1440 1081C1493.3 1081 1546.7 1081 1600 1081C1653.3 1081 1706.7 1081 1760 1081C1813.3 1081 1866.7 1081 1893.3 1081L1920 1081L1920 561L1893.3 579C1866.7 597 1813.3 633 1760 688.7C1706.7 744.3 1653.3 819.7 1600 835.8C1546.7 852 1493.3 809 1440 749.7C1386.7 690.3 1333.3 614.7 1280 623.7C1226.7 632.7 1173.3 726.3 1120 780.3C1066.7 834.3 1013.3 848.7 960 787.5C906.7 726.3 853.3 589.7 800 587.8C746.7 586 693.3 719 640 746C586.7 773 533.3 694 480 632.8C426.7 571.7 373.3 528.3 320 575C266.7 621.7 213.3 758.3 160 780C106.7 801.7 53.3 708.3 26.7 661.7L0 615Z"
-            fill="#e2e2e200"
+            d="M7 10L12 15L17 10"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
         </svg>
       </div>

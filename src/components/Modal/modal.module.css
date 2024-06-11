@@ -65,6 +65,8 @@
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  border: 1px solid #3d3d4e;
+  box-sizing: content-box;
 }
 
 .color {
@@ -85,26 +87,6 @@
   transition: opacity 0.1s linear;
 }
 
-.color:nth-child(1) {
-  background: #2f4f4f;
-}
-
-.color:nth-child(2) {
-  background: #7aa1d2;
-}
-
-.color:nth-child(3) {
-  background: #dbd4b4;
-}
-
-.color:nth-child(4) {
-  background: #cc95c0;
-}
-
-.color:nth-child(5) {
-  background: #282828;
-}
-
 .color:hover {
   flex: 2;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -112,4 +94,6 @@
 
 .color:hover span {
   opacity: 1;
+  padding: 5px;
+  background-color: #3d3d4e6f;
 }
