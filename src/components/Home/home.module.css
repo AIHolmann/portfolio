@@ -1,9 +1,14 @@
 .alejoback {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
 }
 
+.setting {
+  position: absolute;
+  top: 38%;
+  left: 75%;
+}
 .container {
   display: flex;
   align-items: center;
@@ -12,82 +17,114 @@
   top: 0;
   left: 0;
   color: white;
-  padding-left: 100px;
-}
-
-@keyframes animateWords {
-  0% {
-    transform: translateY(0%);
-  }
-  25% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(-200%);
-  }
-  75% {
-    transform: translateY(-300%);
-  }
-  100% {
-    transform: translateY(-400%);
-  }
 }
 
 .conth1 {
   z-index: 999;
+  position: absolute;
+  width: 200vw;
+  height: 100vh;
+  overflow-x: visible;
+}
+
+.conth1 > h2 {
+  transform: translateX(-70vw);
 }
 
 .h1 {
-  font-size: 2.8em;
+  font-size: 190px;
+  font-weight: 900;
+  color: #f2f2f210;
+  user-select: none;
+}
+.contmain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 8%;
+  width: 70%;
+  height: 90vh;
 }
 
-.h1 > .span {
-  position: relative;
-  display: inline-block;
-  color: #ed242b;
-  height: 1.25em;
-  vertical-align: bottom;
-  overflow: hidden;
+.conttext {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
-.span > .span {
-  display: block;
-  animation: animateWords 8s infinite ease;
+.conttext h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.imgcontainer {
-  width: 100vh;
-  right: 0;
-  text-align: center;
+.conttext h2 > b {
+  letter-spacing: 4px;
 }
 
-.mainImage {
-  height: 75%;
-  object-fit: cover;
-  border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
-  overflow: hidden;
-  animation: flow 4s infinite ease-in-out;
+.conttext h3 {
+  text-align: left;
+  font-size: xx-large;
+  margin-top: 10px;
 }
 
-@keyframes flow {
-  0% {
-    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
+.button {
+  z-index: 999;
+  background-color: #111927f7;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 4px;
+  transition: all 250ms;
+  touch-action: manipulation;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: 300;
+  word-spacing: 3px;
+  padding: 17px 26px;
+}
+
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button:hover {
+  transform: translateY(-1.5px);
+}
+
+.button:active {
+  background-color: #111927;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .conttext {
+    justify-content: center;
   }
-  35% {
-    border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
+  .alejoback {
+    height: 70vh;
   }
-  70% {
-    border-radius: 70% 90% 60% 70% / 80% 90% 50% 90%;
-  }
-  100% {
-    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
+
+  .contmain {
+    height: 70vh;
+    width: 85%;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-}
+@media screen and (max-width: 768px) {
+  .conttext {
+    justify-content: flex-end;
+  }
 
-@media screen and (max-width: 767px) {
   .alejoback {
     height: 70vh;
   }
@@ -104,26 +141,55 @@
     padding-left: 0px;
   }
 
-  .imgcontainer {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
+  .conth1 {
+    width: 250vw;
+    height: 70vh;
+    overflow-x: visible;
   }
+}
 
-  .mainImage {
-    aspect-ratio: 1 /1;
-    object-fit: cover;
-    clip-path: none;
-    border: 2px solid black;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
+@media screen and (max-width: 445px) {
+  .conth1 {
+    width: 300vw;
   }
 
   .h1 {
-    font-size: 1.5em;
+    font-size: 150px;
   }
 
-  .h1 > .span {
-    color: rgb(235, 60, 66);
+  .conttext h2 {
+    font-size: 45px;
+  }
+
+  .conttext h3 {
+    font-size: large;
+  }
+
+  .alejoback {
+    height: 90vh;
+  }
+
+  .button {
+    margin-top: 3%;
+    margin-bottom: 4%;
+    font-size: large;
+    padding: 17px 26px;
+  }
+
+  .contmain {
+    width: 90%;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 8%;
+  }
+
+  .conttext {
+    justify-content: flex-start;
+    padding-top: 20%;
+    height: auto;
   }
 }

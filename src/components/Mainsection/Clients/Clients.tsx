@@ -7,7 +7,7 @@ const Clients = () => {
       <div></div>
       <CldImage
         className={style.img}
-        src="https://res.cloudinary.com/datlb3rvw/image/upload/v1716652108/AlejoPortfolio/imagenesNuevas/laptop_nt08nz.webp"
+        src="https://res.cloudinary.com/datlb3rvw/image/upload/v1717522336/AlejoPortfolio/imagenesNuevas/Default_a_laptop_on_a_counter_showing_the_page_of_a_software_w_2_rjrazy.webp"
         alt="Clients Image"
         width={1592}
         height={896}

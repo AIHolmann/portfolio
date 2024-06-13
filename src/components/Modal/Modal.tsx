@@ -6,7 +6,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ estado, cambiarEstado }) => {
-  const paleta = ["#2f4f4f", "#7aa1d2", "#dbd4b4", "#cc95c0", "#282828"];
+  const paleta = ["#ffffff", "#f2f2f2", "#3d3d4e", "#111927f7", "#111928"];
 
   return (
     <>
@@ -31,19 +31,34 @@ const Modal: React.FC<ModalProps> = ({ estado, cambiarEstado }) => {
               </svg>
             </button>
             <div className={style.palette}>
-              <div className={style.color}>
+              <div
+                className={style.color}
+                style={{ background: `${paleta[0]}` }}
+              >
                 <span>{paleta[0]}</span>
               </div>
-              <div className={style.color}>
+              <div
+                className={style.color}
+                style={{ background: `${paleta[1]}` }}
+              >
                 <span>{paleta[1]}</span>
               </div>
-              <div className={style.color}>
+              <div
+                className={style.color}
+                style={{ background: `${paleta[2]}` }}
+              >
                 <span>{paleta[2]}</span>
               </div>
-              <div className={style.color}>
+              <div
+                className={style.color}
+                style={{ background: `${paleta[3]}` }}
+              >
                 <span>{paleta[3]}</span>
               </div>
-              <div className={style.color}>
+              <div
+                className={style.color}
+                style={{ background: `${paleta[4]}` }}
+              >
                 <span>{paleta[4]}</span>
               </div>
             </div>

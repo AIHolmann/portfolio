@@ -135,16 +135,16 @@
   .container h2 {
     font-size: medium;
     top: 6%;
-    left: 10%;
+    left: 6%;
     width: 90%;
   }
 
   .container:hover h2 {
     text-shadow: none;
     letter-spacing: 1px;
-    top: 8%;
-    left: 8%;
-    width: 92%;
-    font-size: 19px;
+    top: 4%;
+    left: 4%;
+    width: 90%;
+    font-size: medium;
   }
 }
