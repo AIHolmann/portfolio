@@ -15,14 +15,14 @@ const Arrowdown = () => {
           fill="#000000"
           className={style.arrowdown}
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+          <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
           <g
             id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             stroke="#CCCCCC"
-            stroke-width="0.704"
+            strokeWidth="0.704"
           />
 
           <g id="SVGRepo_iconCarrier">
@@ -32,9 +32,9 @@ const Arrowdown = () => {
             <g
               id="Page-1"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
               fill="none"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             >
               {" "}
               <g

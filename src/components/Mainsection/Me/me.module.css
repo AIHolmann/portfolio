@@ -133,10 +133,10 @@
 }
 @media screen and (max-width: 425px) {
   .container h2 {
-    font-size: medium;
+    font-size: small;
     top: 6%;
     left: 6%;
-    width: 90%;
+    width: 89%;
   }
 
   .container:hover h2 {
