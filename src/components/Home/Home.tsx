@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
 import Arrowdown from "./arrowdown/Arrowdown";
 import Cardcounter from "./cardcounter/Cardcounter";
