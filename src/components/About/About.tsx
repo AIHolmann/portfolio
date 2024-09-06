@@ -8,11 +8,11 @@ const About = () => {
   );
   const [edad, setEdad] = useState("0");
 
-  useEffect(() => {
+  /* useEffect(() => {
     fetch("api/personalinformation")
       .then((res) => res.json())
       .then((res) => console.log(res));
-  }, []);
+  }, []);*/
 
   useEffect(() => {
     const handleResize = () => {
