@@ -6,6 +6,16 @@ import Card from "../Card/Card";
 
 const data = [
   {
+    name: "Cabañas & Suites Vista Hermosa",
+    description:
+      "Professional page, designed and developed by me for a cabin complex.",
+    stack: ["HTML", "CSS", "JavaScript", "Next.14", "Cloudinary"],
+    link: "https://www.cabañasvistahermosa.com/",
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1725582507/AlejoPortfolio/imagenesNuevas/djne6cthmbwltshtufr2.webp",
+    id: 9,
+  },
+  {
     name: "desing-darkui-1",
     description: "Technical test project for a frontend web developer position",
     stack: ["HTML", "CSS", "JavaScript", "Next.14"],
