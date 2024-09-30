@@ -4,6 +4,7 @@ import Arrowdown from "./arrowdown/Arrowdown";
 import Cardcounter from "./cardcounter/Cardcounter";
 import style from "./home.module.css";
 import { useState, useEffect, useRef } from "react";
+import notification from "../../assets/notification.js";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -11,6 +12,7 @@ const Home = () => {
   const h2developer = useRef<HTMLHeadingElement>(null);
   const svgelement = useRef<SVGSVGElement>(null);
   useEffect(() => {
+    notification();
     const handleScroll = () => {
       let position = window.scrollY;
       setScrollPosition(position);
