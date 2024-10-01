@@ -51,6 +51,7 @@
 }
 
 .conttext {
+  padding-top: 65px;
   height: 100%;
   display: flex;
   flex-direction: column;
