@@ -27,7 +27,7 @@ const data = [
   {
     name: "NextCRUD",
     description:
-      'Task management application. It allows you to create, display, update and delete them. It uses the "Prisma" ORM and has a REST API integrated into the same project (an option that Next.js gives us for small projects)',
+      "Task management application. It allows you to create, display, update and delete them. It uses the Prisma ORM and has a REST API integrated into the same project (an option that Next.js gives us for small projects)",
     stack: [
       "HTML",
       "CSS",
