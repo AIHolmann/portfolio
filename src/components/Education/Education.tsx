@@ -45,6 +45,11 @@ const Education = () => {
 
             <p>Microsoft y LinkedIn. 2023.</p>
           </details>
+          <details className={style.secundarios}>
+            <CustomSummary title="Python Fundamentals" />
+
+            <p>Santander | Open Academy. 2024.</p>
+          </details>
         </details>
         <details className={style.principales}>
           <CustomSummary title={titles.title3} />
