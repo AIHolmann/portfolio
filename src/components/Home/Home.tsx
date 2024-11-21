@@ -73,15 +73,12 @@ const Home = () => {
           <div className={style.contmain}>
             <div className={style.conttext}>
               <h2>
-                a <b>better</b> way to build software
+                Hello! I'm <b>Alejo Holmann</b>
               </h2>
-              <h3>
-                I help you realize your <b>digital business</b> with software
-                that suit your needs.
-              </h3>
+              <h3>Full Stack web developer</h3>
 
               <a href="#contact" className={style.button}>
-                <button>Get started!</button>
+                <button>Contact me!</button>
               </a>
             </div>
             <div className={style.contcardcounter}>

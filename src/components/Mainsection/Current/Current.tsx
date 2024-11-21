@@ -7,7 +7,7 @@ const Current = () => {
       <div className={style.secondlayout}></div>
       <div className={style.text}>
         <span>THE INSIDE SCOOP</span>
-        <h2>Currently developing a WMS (Warehouse Management System)</h2>
+        <h2>Currently developing a professional web page</h2>
       </div>
       <div className={style.card}>
         <ul>
