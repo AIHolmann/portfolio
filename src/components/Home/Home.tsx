@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import notification from "../../assets/notification.js";
 import Namepanel from "../NamePanel/Namepanel";
 import About from "../About/About";
+import Stack from "../Stack/Stack";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -52,8 +53,10 @@ const Home = () => {
               </div>
             </div>
             <div className={style.panelmediosecundario}>
+              <div className={style.stack}>
+                <Stack />
+              </div>
               <div className={style.educprinc}>educacion principal</div>
-              <div className={style.stack}>stack de herramientas</div>
             </div>
 
             <div className={style.panelinferiorsecundario}>

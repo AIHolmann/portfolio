@@ -52,7 +52,7 @@
 }
 
 .foto,
-.educprinc {
+.stack {
   width: 40dvh;
   height: 100%;
   border: 0.0625rem solid var(--border-color);
@@ -61,7 +61,7 @@
 }
 
 .saludo,
-.stack {
+.educprinc {
   width: calc(100% - (16px + 40dvh));
   height: 100%;
   border: 0.0625rem solid var(--border-color);
