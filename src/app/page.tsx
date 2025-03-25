@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import BtnModal from "@/components/Btnmodal/BtnModal";
 import MainSection from "@/components/Mainsection/MainSection";
+import Navbar from "@/components/Navbar/Navbar";
 
 const Index = () => {
   const mode = useSelector((state: RootState) => state.mode.value);
@@ -58,6 +59,9 @@ const Index = () => {
         id="allApp"
       >
         <div className={style.cursor} id="cursor"></div>
+        <div className={style.navbar}>
+          <Navbar />
+        </div>
         <div id="home" className={style.home}>
           <Home />
           {windowWidth > 425 && (

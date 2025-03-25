@@ -1,5 +1,5 @@
 .all {
-  background: #3d3d4e;
+  background: var(--color-2);
 }
 
 .allblack {

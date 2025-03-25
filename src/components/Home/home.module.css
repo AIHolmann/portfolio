@@ -1,196 +1,114 @@
 .alejoback {
   position: relative;
-  height: 90vh;
+  height: auto;
   overflow: hidden;
+  padding-left: 70px;
 }
 
-.setting {
-  position: absolute;
-  top: 38%;
-  left: 75%;
-}
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   top: 0;
   left: 0;
   color: white;
+  padding: 16px;
 }
 
-.conth1 {
-  z-index: 999;
-  position: absolute;
-  width: 200vw;
-  height: 100vh;
-  overflow-x: visible;
+.panelizquierdoprincipal {
+  height: calc(100dvh - 32px);
+  width: calc(100% - (75dvw + 16px));
+  border: 0.0625rem solid var(--border-color);
+  border-radius: var(--borderradius-size);
+  box-shadow: var(--box-shadow);
 }
-
-.conth1 > h2 {
-  transform: translateX(-70vw);
-}
-
-.h1 {
-  font-size: 190px;
-  font-weight: 900;
-  color: #f2f2f210;
-  user-select: none;
-}
-.contmain {
+.panelderechoprincipal {
+  min-height: calc(100dvh - 32px);
+  width: 75dvw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-left: 8%;
-  width: 70%;
-  height: 90vh;
+  gap: 16px;
 }
 
-.conttext {
-  padding-top: 65px;
-  height: 100%;
+.panelsuperiorsecundario,
+.panelmediosecundario,
+.panelinferiorsecundario {
+  width: 100%;
+
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.conttext h2 {
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 1;
+.panelsuperiorsecundario {
+  height: 40dvh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.conttext h2 > b {
-  letter-spacing: 4px;
+.foto,
+.educprinc {
+  width: 40dvh;
+  height: 100%;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: var(--borderradius-size);
+  box-shadow: var(--box-shadow);
 }
 
-.conttext h3 {
-  text-align: left;
-  font-size: xx-large;
-  margin-top: 10px;
+.saludo,
+.stack {
+  width: calc(100% - (16px + 40dvh));
+  height: 100%;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: var(--borderradius-size);
+  box-shadow: var(--box-shadow);
 }
 
-.button {
-  z-index: 999;
-  background-color: #111927f7;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  border-radius: 4px;
-  transition: all 250ms;
-  touch-action: manipulation;
-  margin-top: 3%;
-  margin-bottom: 4%;
-  cursor: pointer;
-  font-size: x-large;
-  font-weight: 300;
-  word-spacing: 3px;
-  padding: 17px 26px;
+.panelmediosecundario {
+  height: 28dvh;
 }
 
-.button:hover,
-.button:focus {
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+.panelinferiorsecundario {
+  min-height: 33dvh;
+}
+.proyectos {
+  width: 50dvw;
+  min-height: 33dvh;
+  height: auto;
+  border: 0.0625rem solid var(--border-color);
+  border-radius: var(--borderradius-size);
+  box-shadow: var(--box-shadow);
 }
 
-.button:hover {
-  transform: translateY(-1.5px);
-}
-
-.button:active {
-  background-color: #111927;
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  transform: translateY(0);
+.infoadicional {
+  min-height: 33dvh;
+  width: calc(100% - (50dvw + 16px));
+  border: 0.0625rem solid var(--border-color);
+  border-radius: var(--borderradius-size);
+  box-shadow: var(--box-shadow);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .conttext {
-    justify-content: center;
-  }
-  .alejoback {
-    height: 70vh;
-  }
-
-  .contmain {
-    height: 70vh;
-    width: 85%;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .conttext {
-    justify-content: flex-end;
-  }
-
-  .alejoback {
-    height: 70vh;
-  }
-
   .container {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+
     top: 0;
     left: 0;
     color: white;
     padding-left: 0px;
   }
-
-  .conth1 {
-    width: 250vw;
-    height: 70vh;
-    overflow-x: visible;
-  }
 }
 
 @media screen and (max-width: 445px) {
-  .conth1 {
-    width: 300vw;
-  }
-
-  .h1 {
-    font-size: 150px;
-  }
-
-  .conttext h2 {
-    font-size: 45px;
-  }
-
-  .conttext h3 {
-    font-size: large;
-  }
-
-  .alejoback {
-    height: 90vh;
-  }
-
-  .button {
-    margin-top: 3%;
-    margin-bottom: 4%;
-    font-size: large;
-    padding: 17px 26px;
-  }
-
-  .contmain {
-    width: 90%;
-    height: 90vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 8%;
-  }
-
-  .conttext {
-    justify-content: flex-start;
-    padding-top: 20%;
-    height: auto;
-  }
 }

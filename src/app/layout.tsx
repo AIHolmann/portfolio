@@ -1,13 +1,12 @@
 "use client";
 import { store } from "@/store";
 import "./globals.css";
-import imagen from "../../public/imagenPagina.webp";
-import { Montserrat } from "next/font/google";
+import { Mulish } from "next/font/google";
 import { Provider } from "react-redux";
 
-const montserrat = Montserrat({
+const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["200", "400", "100", "300", "500", "600", "700", "800", "900"],
+  weight: ["200", "400", "300", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({
@@ -52,7 +51,7 @@ export default function RootLayout({
           />
           <meta property="og:type" content="website" />
         </head>
-        <body className={montserrat.className}>{children}</body>
+        <body className={mulish.className}>{children}</body>
       </html>
     </Provider>
   );
