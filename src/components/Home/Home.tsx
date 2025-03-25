@@ -3,6 +3,7 @@ import style from "./home.module.css";
 import { useState, useEffect, useRef } from "react";
 import notification from "../../assets/notification.js";
 import Namepanel from "../NamePanel/Namepanel";
+import About from "../About/About";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -46,7 +47,9 @@ const Home = () => {
           <div className={style.panelderechoprincipal}>
             <div className={style.panelsuperiorsecundario}>
               <div className={style.foto}>foto</div>
-              <div className={style.saludo}>saludos descripcion</div>
+              <div className={style.saludo}>
+                <About />
+              </div>
             </div>
             <div className={style.panelmediosecundario}>
               <div className={style.educprinc}>educacion principal</div>

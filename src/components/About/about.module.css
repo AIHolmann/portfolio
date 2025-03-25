@@ -1,84 +1,30 @@
 .main {
+  padding: 12px 24px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.main > span {
+  font-size: small;
+  color: var(--color-letraclaro);
+  padding: 6px 12px 6px 0px;
+  word-spacing: 6px;
+}
+
+.main div h2 {
+  font-size: xx-large;
+  color: #fff;
+}
+
+.main div p {
+  color: var(--color-letrafuerte);
+  font-size: medium;
+}
+.main > div {
+  height: 90%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: whitesmoke;
-}
-
-.back {
-  transition: box-shadow 0.1s;
-  transform: 0.2s ease-in-out;
-  width: 850px;
-  height: 490px;
-}
-.back:hover {
-  border-radius: 8px;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
-}
-
-.card {
-  backdrop-filter: blur(15px) saturate(200%);
-  -webkit-backdrop-filter: blur(15px) saturate(200%);
-  background-color: rgba(17, 25, 40, 0.26);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  width: 850px;
-  height: 490px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: stretch;
-}
-
-.card article {
-  width: 450px;
-  font-size: 23px;
-  text-align: start;
-  word-spacing: 0.1em;
-}
-.card div {
-  letter-spacing: 2px;
-}
-.card article:hover {
-  transition: 0.4s ease-in-out;
-  scale: 1.05;
-}
-
-.card div svg:hover {
-  transition: 0.35s ease-in-out;
-  scale: 1.06;
-}
-
-.cardplane {
-  width: 80%;
-  height: 50%;
-  border-top: 2px solid #ffffff75;
-  border-left: 2px solid #ffffff75;
-  box-shadow: 5px 5px 12px #00000035;
-  background: #ffffff25;
-  border-radius: 8px;
-  overflow: hidden;
-  backdrop-filter: blur(4px);
-  padding: 25px;
-}
-
-.cardplane p {
-  font-size: clamp(16px, 20px, 30px);
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-@media screen and (min-width: 767px) and (max-width: 1024px) {
-  .main {
-    min-height: 50vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .main {
-    padding-top: 15px;
-  }
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
