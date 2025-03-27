@@ -1,6 +1,30 @@
-import style from "./education.module.css";
-import CustomSummary from "./customSummary/CustomSummary";
-
+import styles from "./education.module.css";
+const Education = () => {
+  return (
+    <section className={styles.section}>
+      <div>
+        <h4>educación</h4>
+      </div>
+      <ul>
+        <li>
+          <h5>Desarrollador web full stack.</h5>
+          <span>
+            Henry Bootcamp, 700 horas de cursada tehorica-práctica. 2023.
+          </span>
+        </li>
+        <li>
+          <h5>Ingeniería Industrial - EN PROGRESO.</h5>
+          <span>Tercer año, UTN-FRC, Córdoba. 2021.</span>
+        </li>
+        <li>
+          <h5>Colegio en comercio y economía.</h5>
+          <span>IPEM Nº168 Diego de Rojas. 2017.</span>
+        </li>
+      </ul>
+    </section>
+  );
+};
+/*
 const Education = () => {
   const titles = {
     title1: "Professional Education",
@@ -68,10 +92,10 @@ const Education = () => {
           <summary>Secundario</summary>
           <p>Diego de rojas</p>
         </details>
-      </details> */}
+      </details> 
       </div>
     </div>
   );
 };
-
+*/
 export default Education;
