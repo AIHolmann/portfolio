@@ -6,6 +6,7 @@ import Namepanel from "../NamePanel/Namepanel";
 import About from "../About/About";
 import Stack from "../Stack/Stack";
 import Education from "../Education/Education";
+import AditionalInfo from "../Aditionalinfo/AditionalInfo";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -65,7 +66,7 @@ const Home = () => {
             <div className={style.panelinferiorsecundario}>
               <div className={style.proyectos}>proyectos</div>
               <div className={style.infoadicional}>
-                info adicional educacion adicional e idioma
+                <AditionalInfo />
               </div>
             </div>
           </div>

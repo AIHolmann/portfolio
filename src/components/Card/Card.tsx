@@ -1,7 +1,6 @@
 import style from "./card.module.css";
 import Link from "next/link";
 import Loading from "../Loading/Loadin";
-import CustomSummary from "../Education/customSummary/CustomSummary";
 import dynamic from "next/dynamic";
 
 interface ProjectData {
@@ -46,7 +45,7 @@ const Card: React.FC<CarouselProps> = ({ data }) => {
       <div className={style.content}>
         <h5>{data.name}</h5>
         <details>
-          <CustomSummary title="More info..."></CustomSummary>
+          <summary></summary>
           <p>{data.description}</p>
         </details>
         <div className={style.ulcontainer}>

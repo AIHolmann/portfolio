@@ -44,6 +44,10 @@
   justify-content: space-between;
 }
 
+.panelinferiorsecundario {
+  align-items: flex-start;
+  justify-content: space-between;
+}
 .panelsuperiorsecundario {
   height: 40dvh;
   display: flex;
@@ -86,7 +90,7 @@
 }
 
 .infoadicional {
-  min-height: 33dvh;
+  height: auto;
   width: calc(100% - (50dvw + 16px));
   border: 0.0625rem solid var(--border-color);
   border-radius: var(--borderradius-size);
