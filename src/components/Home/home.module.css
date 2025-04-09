@@ -84,9 +84,6 @@
   width: 50dvw;
   min-height: 33dvh;
   height: auto;
-  border: 0.0625rem solid var(--border-color);
-  border-radius: var(--borderradius-size);
-  box-shadow: var(--box-shadow);
 }
 
 .infoadicional {

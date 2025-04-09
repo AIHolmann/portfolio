@@ -1,45 +1,13 @@
 "use client";
 import style from "./home.module.css";
-import { useState, useEffect, useRef } from "react";
-import notification from "../../assets/notification.js";
 import Namepanel from "../NamePanel/Namepanel";
 import About from "../About/About";
 import Stack from "../Stack/Stack";
 import Education from "../Education/Education";
 import AditionalInfo from "../Aditionalinfo/AditionalInfo";
+import Proyects from "../Proyects/Proyects";
 
 const Home = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const h1developer = useRef<HTMLHeadingElement>(null);
-  const h2developer = useRef<HTMLHeadingElement>(null);
-  const svgelement = useRef<SVGSVGElement>(null);
-  useEffect(() => {
-    notification();
-    const handleScroll = () => {
-      let position = window.scrollY;
-      setScrollPosition(position);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollPosition]);
-
-  useEffect(() => {
-    if (h1developer.current && h2developer.current && svgelement.current) {
-      h1developer.current.style.transform = `translateX(-${Math.floor(
-        scrollPosition
-      )}px)`;
-      h2developer.current.style.transform = `translateX(-${
-        70 - Math.floor(scrollPosition / 10)
-      }vw)`;
-      svgelement.current.style.transform = `rotate(${Math.floor(
-        scrollPosition
-      )}deg)`;
-    }
-  }, [scrollPosition]);
-
   return (
     <>
       <div className={style.alejoback}>
@@ -64,7 +32,9 @@ const Home = () => {
             </div>
 
             <div className={style.panelinferiorsecundario}>
-              <div className={style.proyectos}>proyectos</div>
+              <div className={style.proyectos}>
+                <Proyects />
+              </div>
               <div className={style.infoadicional}>
                 <AditionalInfo />
               </div>

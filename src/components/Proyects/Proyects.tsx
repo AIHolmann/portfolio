@@ -1,33 +1,48 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Carousel from "../Carousel/Carousel";
 import style from "./proyects.module.css";
 import Card from "../Card/Card";
 
 const data = [
   {
+    name: "Die Lavendel",
+    description:
+      "Diseñé y desarrollé la página profesional del campo de lavandas 'Die Lavendel'.",
+    stack: ["HTML", "CSS", "JavaScript", "Next.14", "Cloudinary"],
+    link: "https://www.dielavendel.com/",
+    image:
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545528/AlejoPortfolio/imagenes04-2025/etjjbkotqnn1xngvnzzw.webp",
+    id: 10,
+    update: "Marzo, 2025",
+    team: false,
+  },
+  {
     name: "Cabañas & Suites Vista Hermosa",
     description:
-      "Professional page, designed and developed by me for a cabin complex.",
+      "Diseñé y desarrollé la página profesional del complejo de cabañas 'Vista Hermosa'.",
     stack: ["HTML", "CSS", "JavaScript", "Next.14", "Cloudinary"],
     link: "https://www.cabañasvistahermosa.com/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1725582507/AlejoPortfolio/imagenesNuevas/djne6cthmbwltshtufr2.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545530/AlejoPortfolio/imagenes04-2025/hfwivlclfpn12gkfxhpo.webp",
     id: 9,
+    update: "Marzo, 2025",
+    team: false,
   },
   {
     name: "desing-darkui-1",
-    description: "Technical test project for a frontend web developer position",
+    description:
+      "Proyecto/desafío técnico para un puesto de desarrollador web frontend.",
     stack: ["HTML", "CSS", "JavaScript", "Next.14"],
     link: "https://desing-darkui-1.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1716340936/AlejoPortfolio/imagenesNuevas/desing-sarkui-1_buot0z.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545479/AlejoPortfolio/imagenes04-2025/m42xz9vm9xtyfw7w28pj.webp",
     id: 8,
+    update: "Mayo, 2024",
+    repo: "https://github.com/AIHolmann/desing-darkui-1",
+    team: false,
   },
   {
     name: "NextCRUD",
     description:
-      "Task management application. It allows you to create, display, update and delete them. It uses the Prisma ORM and has a REST API integrated into the same project (an option that Next.js gives us for small projects)",
+      "Aplicación de gestión de tareas. Permite crearlas, visualizarlas, actualizarlas y eliminarlas. Utiliza el ORM Prisma y tiene una API REST integrada en el proyecto (una opción que Next.js ofrece para proyectos pequeños).",
     stack: [
       "HTML",
       "CSS",
@@ -40,13 +55,16 @@ const data = [
     ],
     link: "https://nextjs-prisma-crud-nbds3ylg8-alejo-s-projects.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928339/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_45_50_hb3p4i.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545467/AlejoPortfolio/imagenes04-2025/mlvuf1nm4boaebr376uy.webp",
     id: 7,
+    update: "Abril, 2024",
+    repo: "https://github.com/AIHolmann/nextjs-prisma-crud",
+    team: false,
   },
   {
     name: "PerdonApp",
     description:
-      '"PerdonApp", a friendly application to apologize to your favorite person in a very special and unique way. Try it now!',
+      "'PerdonApp', una aplicación amigable para disculparte con tu persona favorita de una forma única y especial. ¡Probala ahora!",
     stack: [
       "HTML",
       "CSS",
@@ -57,23 +75,27 @@ const data = [
     ],
     link: "https://perdonapp.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928335/AlejoPortfolio/imagenesNuevas/Perdon.App_-_Original_Way_to_Apologize_to_Your_Favorite_Person_-_Google_Chrome_24_04_2024_0_06_34_fpc2q5.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545496/AlejoPortfolio/imagenes04-2025/iflshujk4amcpz46n8wf.webp",
     id: 6,
+    update: "Abril, 2024",
+    team: false,
   },
   {
     name: "Jalil Barber",
     description:
-      "Professional page, designed and developed by me for a barber shop.",
+      "Diseñé y desarrollé la página profesional de la barbería 'Jalil Barber'.",
     stack: ["HTML", "CSS", "JavaScript", "Next.14"],
     link: "https://jalil-barber.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928338/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_46_37_ead4wm.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545528/AlejoPortfolio/imagenes04-2025/dajtetnrgxntnry16apv.webp",
     id: 5,
+    update: "Febrero, 2024",
+    team: false,
   },
   {
     name: "Portfolio",
     description:
-      "Personal Portfolio, designed and developed by me. It features a night mode and simple functionalities. Statistics dashboard in development",
+      "Tercera versión de mi portafolio personal, diseñado y desarrollado por mí.",
     stack: [
       "HTML",
       "CSS",
@@ -84,13 +106,16 @@ const data = [
     ],
     link: "https://github.com/AIHolmann/portfolio",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928337/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_47_19_sfiuiw.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545496/AlejoPortfolio/imagenes04-2025/f2csemihjrtfnqdfasnk.webp",
     id: 4,
+    update: "Abril, 2025",
+    repo: "https://github.com/AIHolmann/portfolio",
+    team: false,
   },
   {
     name: "LaPilcha",
     description:
-      "Final project by students from the Henry academy. An e-commerce project, that features a complete CRUD and enables users to browse and purchase various items, select favorites, save them in the shopping cart, create users with Auth0, an integrated payment gateway with 'MercadoPago' for secure transactions, correspondence emails from an SMTP server, and an extensive admin dashboard among other functions.",
+      "Experiencia académica final en equipo, en Henry Bootcamp. Diseñé y desarrollé: base de datos, servidor y API REST, búsquedas, filtrados combinados, ordenamientos, carrito de compras, pasarela de pagos, ventanas por pago aceptado o denegado.",
     stack: [
       "HTML",
       "TailwindCSS",
@@ -102,13 +127,16 @@ const data = [
     ],
     link: "https://pf-la-pilcha.vercel.app/",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928336/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_47_35_h9t21m.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545450/AlejoPortfolio/imagenes04-2025/gw06teqowi7qvexf6jlm.webp",
     id: 3,
+    update: "Septiembre, 2023",
+    repo: "https://github.com/AIHolmann/LaPilchaPF",
+    team: true,
   },
   {
     name: "Rick and Morty App",
     description:
-      "An application in the style of a 'pokédex' with the theme of the animated series 'Rick and Morty'. It features a complete CRUD, user authentication, a favorite selection system, and combined filters.",
+      "Experiencia académica de Henry Bootcamp. Diseñé y desarrollé una aplicación de visualización de tarjetas de información que incluye: autenticación, búsquedas, filtrados combinados, ordenamientos, creación y manejo de datos de una API, sección de favoritos, etc.",
     stack: [
       "HTML",
       "CSS",
@@ -120,13 +148,16 @@ const data = [
     ],
     link: "https://github.com/AIHolmann/Rick_and_Morty_new",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928335/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_50_12_kb5cik.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545517/AlejoPortfolio/imagenes04-2025/hrv8lcuvtix9nmuoeyic.webp",
     id: 2,
+    update: "Abril, 2023",
+    repo: "https://github.com/AIHolmann/Rick_and_Morty_new/",
+    team: false,
   },
   {
     name: "VideoGames App",
     description:
-      "Final individual project from the Henry academy. It features a complete CRUD and displays the stock of video games from an API. With a relational database to store user-created video games, it allows interaction with combined filters.",
+      "Experiencia académica de Henry Bootcamp. Diseñé y desarrollé una aplicación de visualización de videojuegos que incluye: autenticación, búsquedas, filtrados combinados, ordenamientos, creación y manejo de datos de una API, etc.",
     stack: [
       "HTML",
       "CSS",
@@ -138,100 +169,24 @@ const data = [
     ],
     link: "https://github.com/AIHolmann/PI_VideoGames",
     image:
-      "https://res.cloudinary.com/datlb3rvw/image/upload/v1713928336/AlejoPortfolio/imagenesNuevas/Create_Next_App_-_Google_Chrome_23_04_2024_21_53_45_oje9yu.webp",
+      "https://res.cloudinary.com/datlb3rvw/image/upload/v1743545491/AlejoPortfolio/imagenes04-2025/lqcy1kodsq14gwb0v9zg.webp",
     id: 1,
+    update: "Junio, 2023",
+    repo: "https://github.com/AIHolmann/PI_VideoGames",
+    team: false,
   },
 ];
 
 const Proyects = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [windowWidth, setWindowWidth] = useState<number>(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const updateIndex = (newIndex: any) => {
-    if (newIndex < 0) {
-      newIndex = 0;
-    } else if (newIndex >= data.length) {
-      newIndex = data.length - 1;
-    }
-    setActiveIndex(newIndex);
-  };
-
   return (
     <div className={style.all}>
-      <h2>my proyects</h2>
-      {windowWidth > 1280 ? (
-        <div className={style.carousel}>
-          <div
-            className={style.inner}
-            style={{ transform: `translate(-${activeIndex * 100}%)` }}
-          >
-            {data.map((item) => {
-              return <Carousel key={item.id} data={item} />;
-            })}
-          </div>
-          <div className={style.carousel_buttons}>
-            <button
-              onClick={() => {
-                updateIndex(activeIndex - 1);
-              }}
-              className={style.button_arrow}
-            >
-              <span className={style.span}>{"\u2329"}</span>
-            </button>
-            <div className={style.indicators}>
-              {data.map((item, index) => {
-                return (
-                  <button
-                    onClick={() => {
-                      updateIndex(index);
-                    }}
-                    key={item.id}
-                    className={style.indicator_buttons}
-                  >
-                    <span
-                      className={`${
-                        index === activeIndex
-                          ? style.indicator_symbol_active
-                          : style.indicator_symbol
-                      }`}
-                    >
-                      {"\u233e"}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-            <button
-              onClick={() => {
-                updateIndex(activeIndex + 1);
-              }}
-              className={style.button_arrow}
-            >
-              <span className={style.span}>{"\u232a"}</span>
-            </button>
-          </div>
-        </div>
-      ) : (
-        <div className={style.cardCont}>
-          {data.map((item) => {
-            return <Card key={item.id} data={item} />;
-          })}
-        </div>
-      )}
+      <h2>Proyectos que he realizado</h2>
+
+      <div className={style.cardCont}>
+        {data.map((item) => {
+          return <Card key={item.id} data={item} />;
+        })}
+      </div>
     </div>
   );
 };
