@@ -29,7 +29,8 @@
   width: 100%;
 }
 
-.superiorpart ul li a {
+.superiorpart ul li a,
+.superiorpart ul li button {
   color: var(--color-letrafuerte);
   display: flex;
   align-items: center;
@@ -39,7 +40,8 @@
   width: 100%;
   border-radius: var(--borderradius-size);
 }
-.superiorpart ul li:hover a {
+.superiorpart ul li:hover a,
+.superiorpart ul li:hover button {
   background-color: var(--border-color);
 }
 

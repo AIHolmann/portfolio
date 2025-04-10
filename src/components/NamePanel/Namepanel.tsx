@@ -2,6 +2,13 @@ import styles from "./namepanel.module.css";
 import Link from "next/link";
 
 const Namepanel = () => {
+  const scrollToSection = (id: any) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <aside className={styles.aside}>
       <div className={styles.superiorpart}>
@@ -29,7 +36,10 @@ const Namepanel = () => {
             </Link>
           </li>
           <li>
-            <Link href={"#"}>
+            <Link
+              href={"https://github.com/AIHolmann?tab=repositories"}
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -49,7 +59,7 @@ const Namepanel = () => {
             </Link>
           </li>
           <li>
-            <Link href={"#"}>
+            <button onClick={() => scrollToSection("proyects")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -62,10 +72,15 @@ const Namepanel = () => {
                 />
               </svg>
               <span>Proyectos</span>
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href={"#"}>
+            <Link
+              href={
+                "https://www.linkedin.com/in/alejoholmann/recent-activity/all/"
+              }
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -86,7 +101,10 @@ const Namepanel = () => {
         <div className={styles.inferiorpart}>
           <ul>
             <li>
-              <Link href={"#"}>
+              <Link
+                href={"https://www.linkedin.com/in/alejoholmann/"}
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -102,7 +120,7 @@ const Namepanel = () => {
               </Link>
             </li>
             <li className={styles.mail}>
-              <Link href={"#"}>
+              <Link href={"mailto:alejoholmann99@gmail.com"} target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -118,7 +136,10 @@ const Namepanel = () => {
               </Link>
             </li>
             <li>
-              <Link href={"#"}>
+              <Link
+                href={"https://maps.app.goo.gl/n7BPXAYidKQqhnrA7"}
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -134,7 +155,7 @@ const Namepanel = () => {
               </Link>
             </li>
             <li>
-              <Link href={"#"}>
+              <Link href={"https://github.com/AIHolmann"} target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"

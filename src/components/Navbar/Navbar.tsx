@@ -1,6 +1,6 @@
 "use client";
 import style from "./navbar.module.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { light, dark } from "../../store/slices/theme";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store";
@@ -49,8 +49,39 @@ const Navbar = () => {
       closemenu();
     }
   };
+
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    let ubiPrinc = window.scrollY;
+
+    const handleScroll = () => {
+      let ubiAct = window.scrollY;
+
+      setScroll(ubiAct);
+      if (ubiAct > 300) {
+        setScroll(1);
+      } else {
+        setScroll(0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className={style.container}>
+    <nav
+      className={style.container}
+      style={
+        scroll >= 1
+          ? { backgroundColor: "var(--color-1)" }
+          : { backgroundColor: "var(--color-2)" }
+      }
+    >
       <input type="checkbox" id="check" className={style.check} />
       <label htmlFor="check" className={style.checkbtn}>
         <i onClick={unicode}>{unic}</i>
@@ -70,7 +101,7 @@ const Navbar = () => {
               stroke="#9198a1"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="38.966"
+              strokeWidth="24.966"
             >
               <path d="m125.28 700.91-101.56 101.56 101.56 101.56" />
               <path d="m376.97 700.91 101.56 101.56-101.56 101.56" />
@@ -79,7 +110,7 @@ const Navbar = () => {
           </svg>
         </div>
       </a>
-      <span>アレホ</span>
+      <span title="Alejo en japonés">アレホ</span>
       <ul
         className={style.list}
         id="draggableList"
@@ -90,59 +121,9 @@ const Navbar = () => {
         style={{ transform: `translateX(-${translateX}px)` }}
       >
         <li>
-          <a href="#proyects" onClick={closemenu}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 24 24"
-            >
-              <circle cx="12" cy="6" r="1" fill="#9198a1" />
-              <path
-                fill="#9198a1"
-                d="M6 17h12v2H6zm4-5.17l2.792 2.794l3.932-3.935L18 12V8h-4l1.31 1.275l-2.519 2.519L10 9l-4 4l1.414 1.414z"
-              />
-              <path
-                fill="#9198a1"
-                d="M19 3h-3.298a4.497 4.497 0 0 0-.32-.425l-.01-.012a4.426 4.426 0 0 0-2.89-1.518a2.577 2.577 0 0 0-.964 0a4.426 4.426 0 0 0-2.89 1.518l-.01.012a4.497 4.497 0 0 0-.32.424V3H5a3.003 3.003 0 0 0-3 3v14a3.003 3.003 0 0 0 3 3h14a3.003 3.003 0 0 0 3-3V6a3.003 3.003 0 0 0-3-3m1 17a1 1 0 0 1-1 1H5a1.001 1.001 0 0 1-1-1V6a1.001 1.001 0 0 1 1-1h4.55a2.5 2.5 0 0 1 4.9 0H19a1.001 1.001 0 0 1 1 1Z"
-              />
-            </svg>
-            <span>Proyects</span>
-          </a>
+          <p className={style.modoclarooscuro}>Modo claro / oscuro</p>
         </li>
-        <li>
-          <a href="#education" onClick={closemenu}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#9198a1"
-                d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z"
-              />
-            </svg>
-            <span>Education</span>
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={closemenu}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#9198a1"
-                d="M14 11h7V6h-7zm3.5-1.25L15 8V7l2.5 1.75L20 7v1zM2 21q-.825 0-1.412-.587T0 19V5q0-.825.588-1.412T2 3h20q.825 0 1.413.588T24 5v14q0 .825-.587 1.413T22 21zm13.9-2H22V5H2v14h.1q1.05-1.875 2.9-2.937T9 15q2.15 0 4 1.063T15.9 19M9 14q1.25 0 2.125-.875T12 11q0-1.25-.875-2.125T9 8q-1.25 0-2.125.875T6 11q0 1.25.875 2.125T9 14m-4.45 5h8.9q-.85-.95-2.013-1.475T9 17q-1.275 0-2.425.525T4.55 19M9 12q-.425 0-.712-.288T8 11q0-.425.288-.712T9 10q.425 0 .713.288T10 11q0 .425-.288.713T9 12m3 0"
-              />
-            </svg>
-            <span>Contacto</span>
-          </a>
-        </li>
-        <li className={style.liinput}>
+        <li className={style.liinput} title="Modo claro/oscuro">
           <input
             aria-checked={true}
             type="checkbox"

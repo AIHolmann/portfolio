@@ -6,6 +6,7 @@ import Stack from "../Stack/Stack";
 import Education from "../Education/Education";
 import AditionalInfo from "../Aditionalinfo/AditionalInfo";
 import Proyects from "../Proyects/Proyects";
+import Photo from "../Photo/Photo";
 
 const Home = () => {
   return (
@@ -17,7 +18,9 @@ const Home = () => {
           </div>
           <div className={style.panelderechoprincipal}>
             <div className={style.panelsuperiorsecundario}>
-              <div className={style.foto}>foto</div>
+              <div className={style.foto}>
+                <Photo />
+              </div>
               <div className={style.saludo}>
                 <About />
               </div>
@@ -32,7 +35,7 @@ const Home = () => {
             </div>
 
             <div className={style.panelinferiorsecundario}>
-              <div className={style.proyectos}>
+              <div className={style.proyectos} id="proyects">
                 <Proyects />
               </div>
               <div className={style.infoadicional}>

@@ -1,6 +1,5 @@
 "use client";
 import Home from "@/components/Home/Home";
-import Contact from "@/components/Contact/Contact";
 import style from "./page.module.css";
 import Footer from "@/components/Footer/Footer";
 import Btntop from "@/components/Btntop/Btntop";
@@ -8,7 +7,6 @@ import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import BtnModal from "@/components/Btnmodal/BtnModal";
-import MainSection from "@/components/Mainsection/MainSection";
 import Navbar from "@/components/Navbar/Navbar";
 
 const Index = () => {
@@ -67,12 +65,6 @@ const Index = () => {
               <BtnModal />
             </div>
           )}
-        </div>
-        <div id="mainsection">
-          <MainSection />
-        </div>
-        <div id="contact">
-          <Contact />
         </div>
 
         <Footer />
