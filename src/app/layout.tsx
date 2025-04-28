@@ -21,7 +21,7 @@ export default function RootLayout({
           <title>Alejo Holmann - Full-Stack Web Developer</title>
           <meta
             name="description"
-            content="Alejo Holmann is a full-stack web developer focused on the JavaScript and React ecosystem. With multiple completed projects he guarantees efficiency, trust and security"
+            content="Desarrollador web full-stack enfocado en el ecosistema de JavaScript y React. Con múltiples proyectos completados, garantiza eficiencia, confianza y seguridad."
           />
           <meta name="author" content="alejoholmann99@gmail.com" />
           <meta charSet="UTF-8" />
@@ -35,15 +35,15 @@ export default function RootLayout({
           />
           <meta
             property="og:title"
-            content="Alejo Holmann Full-Stack Web Developer"
+            content="Alejo Holmann desarrollador web Full-Stack"
           />
           <meta
             property="og:description"
-            content="Based on the JavaScript ecosystem, specialized in React, I deliver practical and effective solutions."
+            content="Desarrollador web full-stack enfocado en el ecosistema de JavaScript y React. Con múltiples proyectos completados, garantiza eficiencia, confianza y seguridad."
           />
           <meta
             property="og:image"
-            content="https://res.cloudinary.com/datlb3rvw/image/upload/v1713938404/AlejoPortfolio/imagenesNuevas/Dise%C3%B1o_sin_t%C3%ADtulo_jw2dcf.webp"
+            content="https://res.cloudinary.com/datlb3rvw/image/upload/v1745879068/AlejoPortfolio/j75n7t5obppnijg9amqw.webp"
           />
           <meta
             property="og:url"
