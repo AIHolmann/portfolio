@@ -93,11 +93,33 @@
   border-radius: var(--borderradius-size);
   box-shadow: var(--box-shadow);
 }
+@media screen and (max-width: 1400px) {
+  .container {
+    padding-left: 0px;
+  }
+  .foto,
+  .stack {
+    width: 35dvh;
+  }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .saludo,
+  .educprinc {
+    width: calc(100% - (16px + 35dvh));
+  }
+}
+@media screen and (max-width: 1024px) {
+  .foto,
+  .stack {
+    width: 25dvh;
+  }
+
+  .saludo,
+  .educprinc {
+    width: calc(100% - (16px + 25dvh));
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .container {
     display: flex;
     flex-direction: column-reverse;
@@ -109,7 +131,49 @@
     color: white;
     padding-left: 0px;
   }
+
+  .panelderechoprincipal {
+    width: 100%;
+  }
+  .proyectos {
+    width: 60dvw;
+  }
+  .infoadicional {
+    width: calc(100% - (60dvw + 16px));
+  }
 }
 
-@media screen and (max-width: 445px) {
+@media screen and (max-width: 530px) {
+  .container {
+    padding: 10px;
+  }
+  .alejoback {
+    padding-left: 50px;
+  }
+  .panelsuperiorsecundario {
+    height: 30dvh;
+  }
+  .panelinferiorsecundario {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .proyectos {
+    width: 95%;
+  }
+  .infoadicional {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .foto,
+  .stack {
+    width: 15dvh;
+  }
+
+  .saludo,
+  .educprinc {
+    width: calc(100% - (16px + 15dvh));
+  }
 }

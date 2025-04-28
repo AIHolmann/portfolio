@@ -4,8 +4,9 @@ import { useState, useRef, useEffect } from "react";
 import { light, dark } from "../../store/slices/theme";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store";
+import Namepanel from "../NamePanel/Namepanel";
 
-const Navbar = () => {
+const Navbar = ({ windowWidth }: { windowWidth: number }) => {
   let [unic, setUnic] = useState("\u2630");
   const dispatch = useDispatch();
   const mode = useSelector((state: RootState) => state.mode.value);
@@ -120,6 +121,11 @@ const Navbar = () => {
         onTouchEnd={handleTouchEnd}
         style={{ transform: `translateX(-${translateX}px)` }}
       >
+        {windowWidth < 955 && (
+          <li>
+            <Namepanel />
+          </li>
+        )}
         <li>
           <p className={style.modoclarooscuro}>Modo claro / oscuro</p>
         </li>

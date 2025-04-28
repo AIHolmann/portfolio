@@ -7,7 +7,7 @@
 .aside > div > h4 {
   color: var(--color-letraclaro);
   padding: 0px 0px 12px 0px;
-  font-size: small;
+  font-size: var(--letra-xsmall);
 }
 
 .aside > ul {
@@ -28,10 +28,25 @@
 .aside > ul > li h5 {
   margin-right: 12px;
   color: var(--color-letraazul);
-  font-size: large;
+  font-size: var(--letra-small);
   flex-grow: 1;
 }
 .aside > ul > li span {
-  font-size: medium;
+  font-size: var(--letra-xsmall);
   color: var(--color-letrafuerte);
+}
+
+@media screen and (max-width: 750px) {
+  .aside {
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .aside {
+    padding: 6px 12px;
+  }
+  .aside > ul {
+    gap: initial;
+  }
 }

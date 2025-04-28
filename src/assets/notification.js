@@ -11,9 +11,9 @@ const notification = () => {
             document.addEventListener("visibilitychange", () => {
               if (document.visibilityState === "hidden") {
                 // Enviar una notificación al salir de la página
-                registration.showNotification("Hey! come back", {
-                  body: "Don't forget to contact me!",
-                  tag: "Come back",
+                registration.showNotification("Hey! no te vayas", {
+                  body: "No olvides contactarme!",
+                  tag: "Vuelve 😄",
                   icon: "",
                   vibrate: [400, 150, 400],
                 });

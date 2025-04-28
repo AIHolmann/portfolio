@@ -174,7 +174,13 @@ const Namepanel = () => {
         </div>
         <div className={styles.hr} />
         <div className={styles.buttoncontainer}>
-          <button>descargar cv</button>
+          <a
+            download="CV_AlejoHolmann.pdf"
+            title="Descarga mi curriculum"
+            href="/CV_AlejoHolmann.pdf"
+          >
+            <button>descargar cv</button>
+          </a>
         </div>
       </div>
     </aside>

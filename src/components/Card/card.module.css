@@ -16,7 +16,7 @@
 }
 
 .firstcomment {
-  font-size: small;
+  font-size: var(--letra-xsmall);
   color: var(--color-letraclaro);
 }
 
@@ -30,11 +30,11 @@
 }
 .title h5,
 .title h4 {
-  font-size: large;
+  font-size: var(--letra-medium);
   color: var(--color-letraazul);
 }
 .title h6 {
-  font-size: large;
+  font-size: var(--letra-medium);
   color: var(--color-letraclaro);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .content {
-  flex: 2 1 300px;
+  flex: 2 1 250px;
   text-align: start;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .ulcontainer div p {
-  font-size: small;
+  font-size: var(--letra-small);
   color: var(--color-letraclaro);
 }
 
@@ -101,7 +101,7 @@
 
 .content ul li {
   padding: 6px 12px;
-  font-size: medium;
+  font-size: var(--letra-small);
   margin: 8px;
   color: var(--color-letraazul);
   background-color: #4184e41a;
@@ -116,7 +116,7 @@
 .infotooltip {
   height: 29px;
   width: auto;
-  font-size: small;
+  font-size: var(--letra-xsmall);
   color: var(--color-letrafuerte);
   position: absolute;
   top: -29px;
@@ -133,4 +133,18 @@
   border-top-left-radius: var(--borderradius-size);
   border-top-right-radius: var(--borderradius-size);
   z-index: 999;
+}
+
+@media screen and (max-width: 530px) {
+  .titlecontainer {
+    padding: 6px 12px 40px 12px;
+  }
+
+  .ulcontainer,
+  .update {
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 390px) {
 }

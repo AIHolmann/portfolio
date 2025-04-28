@@ -16,8 +16,7 @@ const About = () => {
         <p>
           Mi expertise se centra en el ecosistema <i>JavaScript</i> y siempre
           estoy dispuesto a aprender y compartir conocimientos con otros
-          desarrolladores, lo que me permite contribuir activamente al
-          crecimiento del equipo.
+          desarrolladores.
         </p>
       </div>
     </div>

@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={style.footer}>
       <section>
         <span>
-          © {añoActual}. All rights reserved | Design and development{" "}
+          © {añoActual}. Todos los derechos reservados | Diseño y desarrollo{" "}
           <a href="mailto:alejoholmann99@gmail.com" className={style.alejo}>
             Alejo Holmann
           </a>

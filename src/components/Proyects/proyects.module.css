@@ -9,8 +9,8 @@
 .all h2 {
   text-align: start;
   align-self: flex-start;
-  color: var(--color-letrafuerte);
-  font-size: x-large;
+  color: var(--color-letraclaro);
+  font-size: var(--letra-xsmall);
   margin-bottom: 16px;
 }
 

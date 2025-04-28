@@ -3,9 +3,19 @@
 }
 
 .allblack {
-  background: #966e8d;
-  background: -webkit-linear-gradient(to right, #5b789c, #777362, #966e8d);
-  background: linear-gradient(to right, #5b789c, #777362, #966e8d);
+  background: #363f4a;
+  background: -webkit-linear-gradient(
+    to right,
+    #363f4a,
+    rgb(42, 50, 60),
+    rgb(49, 58, 68)
+  );
+  background: linear-gradient(
+    to right,
+    #363f4a,
+    rgb(42, 50, 60),
+    rgb(49, 58, 68)
+  );
 }
 
 .cursor {
@@ -21,13 +31,6 @@
 
 .home {
   position: relative;
-}
-
-.positionbtn {
-  position: absolute;
-  z-index: 1600;
-  bottom: 40px;
-  left: 5vw;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {

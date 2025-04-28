@@ -180,7 +180,7 @@ const data = [
 const Proyects = () => {
   return (
     <div className={style.all}>
-      <h2>Proyectos que he realizado</h2>
+      <h2>proyectos que he realizado</h2>
 
       <div className={style.cardCont}>
         {data.map((item) => {

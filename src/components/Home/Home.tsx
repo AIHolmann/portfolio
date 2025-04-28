@@ -8,14 +8,16 @@ import AditionalInfo from "../Aditionalinfo/AditionalInfo";
 import Proyects from "../Proyects/Proyects";
 import Photo from "../Photo/Photo";
 
-const Home = () => {
+const Home = ({ windowWidth }: { windowWidth: number }) => {
   return (
     <>
       <div className={style.alejoback}>
         <div className={style.container}>
-          <div className={style.panelizquierdoprincipal}>
-            <Namepanel />
-          </div>
+          {windowWidth > 950 && (
+            <div className={style.panelizquierdoprincipal}>
+              <Namepanel />
+            </div>
+          )}
           <div className={style.panelderechoprincipal}>
             <div className={style.panelsuperiorsecundario}>
               <div className={style.foto}>

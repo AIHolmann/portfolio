@@ -6,7 +6,6 @@ import Btntop from "@/components/Btntop/Btntop";
 import type { RootState } from "@/store";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import BtnModal from "@/components/Btnmodal/BtnModal";
 import Navbar from "@/components/Navbar/Navbar";
 
 const Index = () => {
@@ -56,15 +55,10 @@ const Index = () => {
       >
         <div className={style.cursor} id="cursor"></div>
         <div className={style.navbar}>
-          <Navbar />
+          <Navbar windowWidth={windowWidth} />
         </div>
         <div id="home" className={style.home}>
-          <Home />
-          {windowWidth > 425 && (
-            <div className={style.positionbtn}>
-              <BtnModal />
-            </div>
-          )}
+          <Home windowWidth={windowWidth} />
         </div>
 
         <Footer />
